@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>浙江省智慧农业云平台</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/slider-pro.min.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/zlaq.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/echarts.css" />
+	<style>
+		.table-head{
+			overflow: hidden;
+			margin-bottom: 20px;
+			margin-top: 14px;
+		}
+		.table-head span{
+			margin: 0 21px;
+		}
+		.table-center{
+			color:#b9b9bc;
+		}
+	</style>
+</head>
+<body>
+    <div class="header">
+        <h1><img src="images/logo.png" width="420" height="43" /></h1>
+    </div>
+    <span class="menu"></span>
+    <ul id="menuItems" class="menu-items" style="display:none">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ncyj.html">农村经营</a></li>
+        <li><a href="nyst.html">农业生态</a></li>
+        <li class="active">质量安全</li>
+        <li><a href="ncpjg.html">农产品价格</a></li>
+        <li><a href="xmjg.html">畜牧监管</a></li>
+        <li><a href="zhnj.html">智慧农机</a></li>
+        <i class="left-top"></i>
+        <i class="right-top"></i>
+        <i class="right-bottom"></i>
+        <i class="left-bottom"></i>
+    </ul>
+    <div class="wrap">
+        <div class="col01">
+            <div class="box qs" id="title">
+                <div class="title"><h2>全省农资销售情况</h2></div>
+                <div class="total"><i>总数</i><span>41816</span>个</div>
+                <i class="qsnzxs map-icon-com icon-blue"></i>
+                <div class="chart" style="width:525px;height:250px;">              	
+    				<div id="zlaqLine" style="width:590px;height:230px;"></div>             			 
+				</div> 
+				<div class="chart" style="width:525px;height:200px;">              	
+    				<div id="zlaqBar" style="width:590px;height:240px;"></div>
+				</div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+        </div>
+        <div class="col02" id="mapBtns">
+            <ul class="zlaq-maps" id="tab1">
+                <li>
+                    <span class="hz">456210</span>
+                    <span class="nb">456210</span>
+                    <span class="wz">456210</span>
+                    <span class="tz">456210</span>
+                    <span class="ls">456210</span>
+                    <span class="qz">456210</span>
+                    <span class="zs">456210</span>
+                    <span class="huz">456210</span>
+                    <span class="jx">456210</span>
+                    <span class="sx">456210</span>
+                    <span class="jh">456210</span>
+                    <div class="ect2" id="zlaqmap"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="col03">
+            <div class="box">
+                <div class="title"><h2>可追溯分析</h2></div>
+                <div class="total">
+                	<i class="kzs-circle zszt-color"></i>
+                	<i class="kzs-tit">可追溯主体</i>
+                	<span>41816</span>个
+                </div>
+                <span class="zszt-up zszt-zsm">
+                	同比增长<i class="arrow-com down-green"></i>
+                	<span>12%</span>
+                </span>
+                <i class="kzszt map-icon-com icon-yellow"></i>
+                <div class="total total-kzsm">
+                	<i class="kzs-circle zsm-color"></i>
+                	<i class="kzs-tit">可追溯码</i>
+                	<span class="zsm-num">41816</span>个
+                </div>
+                <span class="zsm-down zszt-zsm">
+                	同比下降<i class="arrow-com up-red"></i>
+                	<span>12%</span>
+                </span>
+                <i class="kzsm map-icon-com icon-yellow"></i>
+                <div id="zlaqLine2" style="width:590px;height:200px;top:-66px;"></div>            
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+            <div class="box">
+                <div class="title"><h2>农产品主体分析</h2></div>
+                <div class="total"><i>总数</i><span>41816</span>个</div>
+                <i class="ncpztfx map-icon-com icon-yellow"></i>          
+                <div class="chart" style="width:408px;height:150px;margin:0 auto;">
+                	<div id="zlaqPie2" style="width:270px;height:280px;top:-72px;left:-76px;"></div>
+           			<table class="table-box2" style="margin-left:16px;top:114px;">
+						<tr class="table-head">
+						    <td class="com classify">分类</td>
+						    <td class="com value">数量(个)</td>
+						 </tr>
+						<tr class="table-center">
+							<td style="padding-right:100px;"><i class="icon01 icon-com"></i>合作社</td>
+							<td style="padding-right:70px;">5272</td>
+						</tr>
+						<tr class="table-center">
+							<td><i class="icon02 icon-com"></i>龙头企业</td>
+							<td>19999</td>
+						</tr>
+						<tr class="table-center">
+							<td><i class="icon03 icon-com"></i>家庭农场</td>
+							<td>29200</td>
+						</tr>
+						<tr class="table-center">
+							<td><i class="icon04 icon-com"></i>其他</td>
+							<td>15265</td>
+						</tr>
+					</table>                	                	                          	
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>	
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box col04">
+            <div class="title"><h2>农资企业主体分析</h2></div>            
+			<div class="total"><i>总数</i><span>41816</span>个</div>
+			<i class="nzqyztfx map-icon-com icon-yellow"></i>
+            <div class="chart" style="width:408px;height:150px;margin:0 auto;">
+	        	<div id="zlaqPie1" style="width:270px;height:280px;top:-82px;left:-86px;"></div>
+	   			<table class="table-box2" style="top:104px;">
+					<tr class="table-head">
+					    <td class="com classify">分类</td>
+					    <td class="com value">数量(个)</td>
+					 </tr>
+					<tr class="table-center">
+						<td style="padding-right:112px;"><i class="icon01 icon-com"></i>批发</td>
+						<td style="padding-right:70px;">5272</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon02 icon-com"></i>生产</td>
+						<td>19999</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon03 icon-com"></i>零售</td>
+						<td>29200</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon04 icon-com"></i>批零兼营</td>
+						<td>15265</td>
+					</tr>
+				</table>      
+	        </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>     
+        <div class="col05 box">
+            <div class="title"><h2>“三品一标认证”</h2></div>
+            <div class="total"><i>总数</i><span>41816</span>个</div>
+            <i class="spybrz map-icon-com icon-yellow"></i>
+            <div class="chart" style="position:absolute;top:45px;right:50px;width:454px;height:155px;">
+            	<div id="zlaqPie3" style="width:270px;height:280px;top:-28px;left:-74px;"></div>
+           		<table class="table-box3" style="top:56px;left:188px;">
+					<tr class="table-head">
+					    <td class="com classify">分类</td>
+					    <td class="com value">数量(个)</td>
+					 </tr>
+					<tr class="table-center">
+						<td style="padding-right:70px;"><i class="icon01 icon-com"></i>无公害农产品</td>
+						<td style="padding-right:70px;">5272</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon02 icon-com"></i>绿色产品</td>
+						<td>19999</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon03 icon-com"></i>有机食品</td>
+						<td>29200</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon04 icon-com"></i>农产品地理标识</td>
+						<td>15265</td>
+					</tr>
+				</table>
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+        <div class="box col06">
+            <div class="title"><h2>农产品检测批次</h2></div>            
+			<div class="total"><i>总数</i><span>41816</span>批</div>
+			<i class="ncpjcpc map-icon-com icon-yellow"></i>
+			<div class="chart" style="width:408px;height:150px;margin:0 auto;">
+	            	<div id="zlaqPie4" style="width:270px;height:280px;top:-84px;left:-78px;"></div>
+	       			<table class="table-box2" style="margin-top:-15px;margin-left:16px;">
+						<tr class="table-head">
+						    <td class="com classify">分类</td>
+						    <td class="com value">数量(个)</td>
+						 </tr>
+						<tr class="table-center">
+							<td style="padding-right:112px;"><i class="icon01 icon-com"></i>合格数</td>
+							<td style="padding-right:70px;">5272</td>
+						</tr>
+						<tr class="table-center">
+							<td><i class="icon02 icon-com"></i>不合格数</td>
+							<td>19999</td>
+						</tr>
+						<tr class="table-center">
+							<td><i class="icon03 icon-com"></i>不合格率</td>
+							<td>10%</td>
+						</tr>
+					</table>      
+	            </div>	
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+    <script type="text/javascript" src="js/zlaq.js" ></script>
+    <script type="text/javascript" src="js/drawMap2.js" ></script>
+    <script>
+    $(function() {
+        //下拉菜单
+        $(".menu").mouseover(function(){
+            $("#menuItems").slideDown();
+        });
+        $("#menuItems").mouseleave(function(){
+            $(this).slideUp();
+        })
+		
+        //全屏铺满
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+    });
+    //调整浏览器窗口全屏铺满
+    $(window, document).resize(function() {
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%"
+        });
+    });
+</script>
+</body>
+</html>

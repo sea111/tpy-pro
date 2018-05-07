@@ -1,0 +1,211 @@
+{
+  "total":"11",
+	"rows":[
+		{
+		"id":"wenzhou",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"hangzhou",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"ningbo",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"taizhou",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"lishui",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"quzhou",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jinhua",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"shaoxing",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"huzhou",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jiaxing",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"zhoushan",
+		"value":[
+	            {"value":22, "name":"粮食"},
+	            {"value":78, "name":"剩余产量"}
+	        ]
+	   	}
+	],
+	"rows2":[
+		{
+		"id":"wenzhou",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":20, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"hangzhou",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":20, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"ningbo",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":20, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"taizhou",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":20, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"lishui",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":50, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"quzhou",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jinhua",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"shaoxing",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"huzhou",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jiaxing",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":60, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"zhoushan",
+		"value":[
+	            {"value":22, "name":"茶叶"},
+	            {"value":20, "name":"剩余产量"}
+	        ]
+	   	}
+	],
+	"rows3":[
+		{
+		"id":"wenzhou",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"hangzhou",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"ningbo",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"taizhou",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"lishui",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"quzhou",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jinhua",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"shaoxing",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"huzhou",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"jiaxing",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	},{
+		"id":"zhoushan",
+		"value":[
+	            {"value":22, "name":"食用菌"},
+	            {"value":42, "name":"剩余产量"}
+	        ]
+	   	}
+	]
+	
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/reset.css" rel="stylesheet" />
+	    <link href="css/slider-pro.min.css" rel="stylesheet" />
+	    <link href="css/common.css" rel="stylesheet" />
+	    <link href="css/nyst.css" rel="stylesheet" />
+	    <link href="css/echarts.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="header">
+	        <h1><img src="images/logo.png" width="420" height="43" /></h1>
+	    </div>
+	    <span class="menu"></span>
+	    <ul id="menuItems" class="menu-items" style="display:none">
+	        <li><a href="index.html">首页</a></li>
+	        <li><a href="ncjy.html">农村经营</a></li>
+	        <li class="active">农业生态</li>
+	        <li><a href="zlaq.html">质量安全</a></li>
+	        <li><a href="ncpjg.html">农产品价格</a></li>
+	        <li><a href="xmjg.html">畜牧监管</a></li>
+	        <li><a href="zhnj.html">智慧农机</a></li>
+	        <i class="left-top"></i>
+	        <i class="right-top"></i>
+	        <i class="right-bottom"></i>
+	        <i class="left-bottom"></i>
+	    </ul>
+	    <div id="tabsFull">	
+	    	<ul class="tabs-today clearfix">
+	    		<li class="nystjcd active">农业生态监测点</li>
+	    		<li class="ztdt">专题图</li>
+	    	</ul>
+	    	<div class="wraprow clearfix" id="tab-1">
+	            <div class="col01">
+	            	<div class="chart" style="height:976px;background:transparent">
+	                    <div id="nystMap1" style="width:1300px;height:976px;left:10%;"></div>
+	               		<ul class="nyst-maps">
+			                <li class="nyst-li">
+			                    <!--<i class="hz purple"></i>
+			                    <i class="nb purple"></i>
+			                    <i class="wz"></i>
+			                    <i class="tz"></i>
+			                    <i class="ls purple"><i class="green"></i></i>
+			                    <i class="qz"></i>
+			                    <i class="zs"></i>
+			                    <i class="huz green"></i>
+			                    <i class="jx"></i>
+			                    <i class="sx purple"><i class="green"></i></i>
+			                    <i class="jh"></i>-->
+			                </li>
+			            </ul>
+	            	
+	            	</div>
+	                <ul id="mapBtn" class="legend">
+	                	<li class="nyhlw">农业物联网网点：<span>0个</span></li>
+	                    <li><i class="ws"></i>温室：<span>0个</span></li>
+	                    <li><i class="dt"></i>大田：<span>0个</span></li>
+	                    <li><i class="cy"></i>菜园：<span>0个</span></li>
+	                    <li><i class="gy"></i>果园：<span>0个</span></li> 
+	                    <!--<li><i class="gy"></i>水产：<span>0个</span></li> 
+	                    <li><i class="gy"></i>畜牧：<span>0个</span></li> 
+	                    <li><i class="gy"></i>植保：<span>0个</span></li>                 -->
+	                </ul>
+	                <ul id="ny-bc">
+	                	<li><i class="ny-bc-com greens"></i>农业物联网</li>
+	                	<li><i class="ny-bc-com purple"></i>病虫害监测点</li>
+	                </ul>
+	                <div id="nystPie1" style="width:200px;height:200px;top:-70%;left:1.5%;"></div>
+	                <!--<div class="box">
+	                    <div class="title title1"><h2>全省近一年虫情K线分析</h2></div>
+	                    <div class="chart" style="width:500px;height:155px;">
+	                        <div id="nystLine1" style="width:560px;height:240px;top:-30px;"></div>
+	                    </div>
+	                    <i class="left-top"></i>
+	                    <i class="right-top"></i>
+	                    <i class="right-bottom"></i>
+	                    <i class="left-bottom"></i>
+	                </div>  -->
+	            </div>
+	            <div class="col02">
+	                <div class="box row01">
+	                    <div class="title title2"><h2>全省近1季度虫情统计</h2></div>                 
+	                    <div class="slider-top">
+                        	<div class="chart" style="width:495px;height:160px;margin:0px auto 0;">
+								<div id="nystLine2" style="width:560px;height:260px;left:-5%;top:-22px;"></div>
+	                    	</div>
+	                    </div> 
+	                    <div class="chongqing">
+	                		<p class="chq-top">
+	                			<span class="chq-top-com">大螟</span>
+	                			<span class="chq-top-com">二化螟</span>
+	                			<span class="chq-top-com">稻纵卷叶螟</span>
+	                			<span class="chq-top-com">白背飞虱</span>
+	                			<span class="chq-top-com">褐飞虱</span>
+	                		</p>
+	                		<p class="chq-bottom">
+	                			<span class="chq-bottom-com">成虫6头</span>
+	                			<span class="chq-bottom-com">成虫6头</span>
+	                			<span class="chq-bottom-com">成虫6头</span>
+	                			<span class="chq-bottom-com">成虫6头</span>
+	                			<span class="chq-bottom-com">成虫6头</span>
+	                		</p>
+	                	</div>
+	                    <i class="left-top"></i>
+	                    <i class="right-top"></i>
+	                    <i class="right-bottom"></i>
+	                    <i class="left-bottom"></i>
+	                </div>
+	                <div class="box row03">
+	                    <div class="title title3"><h2>全省下一季度虫情预警</h2></div>
+	                    <div class="pie-article">
+	                    	<div id="nystPie2" style="width:150px;height:200px;"></div>
+	                    	<div class="pie-article-right">
+	                    		<p class="lsyj">蓝色预警1级</p>
+	                    		<p class="yj">预警:本预警表示害虫数量少，危害很轻，但要注意观察气候环境，防止当气温合适时害虫突然爆发，在本预警阶段以观察和杂草清理为主。</p>
+	                    	</div>
+	                    </div>
+	                    <p class="pie-box">
+		                    <div class="yjxs">
+		                    	<span class="yj-con red-yj"><i class="yj-color red"></i>红色预警</span>
+		                    	<span class="yj-con"><i class="yj-color orange"></i>橙色预警</span>
+		                    	<span class="yj-con"><i class="yj-color yellow"></i>黄色预警</span>
+		                    	<span class="yj-con"><i class="yj-color blue"></i>蓝色预警</span>
+		                    </div>
+		                    <div class="yjdj">
+		                    	<span class="dj-con">9-12级</span>
+		                    	<span class="dj-con">7-9级</span>
+		                    	<span class="dj-con">4-6级</span>
+		                    	<span class="dj-con">1-3级</span>
+		                    </div>
+	                    	<div id="nystPie3" style="width:150px;height:200px;"></div>
+		                    <div id="nystPie4" style="width:150px;height:200px;top:-45%;left:24%;"></div>
+	                    	<div id="nystPie5" style="width:150px;height:200px;top:-90%;left:48%;"></div>
+	                    	<div id="nystPie6" style="width:150px;height:200px;top:-134%;left:70%;"></div>
+		                    <div class="pie-con">
+		                    	<span class="pie-yj yj-red">红色预警</span>
+		                    	<span class="pie-yj yj-orange">橙色预警</span>
+		                    	<span class="pie-yj yj-yellow">黄色预警</span>
+		                    	<span class="pie-yj yj-blue">蓝色预警</span>
+		                    </div>
+	                    </p>
+	                    <i class="left-top"></i>
+	                    <i class="right-top"></i>
+	                    <i class="right-bottom"></i>
+	                    <i class="left-bottom"></i>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="wraprow clearfix" class="tab-2" id="tab-2" style="display:none;">
+	        	<div class="tab-ul" id="tab-ul">
+		        	<ul class="sq-map-legend" id="sq-map-legend">
+		                <li class="sq-bottom sq-tr"><i class="trsq"></i>土壤墒情(含水量)</li>
+		                <li class="sq-hc"><i class="hcyc"></i>寒潮预测(℃)</li>
+		                <li class="sq-js"><i class="jsl"></i>降水量(mm)</li> 
+		                <!--<li id="sq-line"></li>-->
+		            </ul>
+	            </div>
+	            <div class="tab-con" id="tab-con">
+
+		            <div class="tab-hide tab-div" id="sq-tr">
+			        	<div class="col01">
+			                <ul class="sq-legend">
+			                    <li><i class="tr-color color1"></i>干旱(0~16%)</li>
+			                    <li><i class="tr-color color2"></i>轻旱(10~25%)</li>
+			                    <li><i class="tr-color color3"></i>适宜(25~40%)</li>
+			                    <li><i class="tr-color color4"></i>偏湿(40~80%)</li>
+			                    <li><i class="tr-color color6"></i>洪涝(80%~100%)</li>   
+			                </ul>
+			            	<div class="chart tr-hc-js" id="tr-trsq" ></div>
+			                
+			                <div class="box">
+			                    <div class="title"><h2>近一年墒情分析</h2></div>
+			                    <div class="chart" style="width:500px;height:155px;">
+			                        <div id="nystLine3" style="width:560px;height:240px;top:-30px;"></div>
+			                    </div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>  
+			            </div>
+			            <div class="col02">
+			                <div class="box row01">
+			                    <div class="title"><h2>近1季度土壤相对含水量变化曲线</h2></div>
+		                    	<div class="chart" style="width:495px;height:160px;margin:0px auto 0;">
+									<div id="nystLine4" style="width:560px;height:380px;left:-5%;"></div>
+		                    	</div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			                <div class="box row03" id="eventr">
+			                    <div class="title"><h2>未来全省墒情预测</h2></div>
+			                    <ul class="tabs-btn">
+			                        <li class="dst">第3天</li>
+			                        <li class="dwt">第5天</li>
+			                        <li class="dqt">第7天</li>
+			                    </ul>
+			                    <ul id="tr-ztMap">
+		                    		<li class="tr-range"><i class="tr-color color1"></i>渍涝95-100%</li>
+		                    		<li class="tr-range"><i class="tr-color color2"></i>过多70-95%</li>
+		                    		<li class="tr-range"><i class="tr-color color3"></i>适宜55-70%</li>
+		                    		<li class="tr-range"><i class="tr-color color4"></i>不足45-55%</li>
+		                    		<li class="tr-range"><i class="tr-color color5"></i>干旱35-45%</li>
+		                    		<li class="tr-range"><i class="tr-color color6"></i>特旱0-35%</li>
+		                    	</ul>
+			                    <div id="tr-ztMap2" class="tr-com"></div>
+			                    <div id="tr-ztMap3" class="tr-com" style="display:none"></div>
+			                    <div id="tr-ztMap4" class="tr-com" style="display:none"></div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			            </div>
+		        	</div>
+		        	<div class="tab-hide tab-div" id="sq-hc">
+			        	<div class="col01">
+			                <ul class="sq-legend">
+			                    <li><i class="tr-color hc-color1"></i>寒冷(<5℃)</li>
+			                    <li><i class="tr-color hc-color2"></i>冷(5~20℃)</li>
+			                    <li><i class="tr-color hc-color3"></i>温和(20~33℃)</li>
+			                    <li><i class="tr-color hc-color4"></i>炎热(33~39℃)</li>
+			                    <li><i class="tr-color hc-color9"></i>高温(>39℃)</li>   
+			                </ul>
+			            	<div class="chart tr-hc-js" id="hc-trsq"></div>
+			                
+			                <div class="box">
+			                    <div class="title"><h2>近一年寒潮分析</h2></div>
+			                    <div class="chart" style="width:500px;height:155px;">
+			                        <div id="nystLine5" style="width:560px;height:240px;top:-30px;"></div>
+			                    </div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>  
+			            </div>
+			            <div class="col02">
+			                <div class="box row01">
+			                    <div class="title"><h2>近1季度气温变化曲线</h2></div>
+		                    	<div class="chart" style="width:495px;height:160px;margin:0px auto 0;">
+									<div id="nystLine6" style="width:560px;height:380px;left:-5%;"></div>
+		                    	</div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			                <div class="box row03" id="evenhc">
+			                    <div class="title"><h2>未来全省寒潮预测</h2></div>
+			                    <ul class="tabs-btn">
+			                        <li class="actives dst">第3天</li>
+			                        <li class="dwt">第5天</li>
+			                        <li class="dqt">第7天</li>
+			                    </ul>
+			                    <ul id="hc-ztMap">
+		                    		<li class="tr-range"><i class="tr-color hc-color1"></i><5℃</li>
+		                    		<li class="tr-range"><i class="tr-color hc-color2"></i>5~20℃</li>
+		                    		<li class="tr-range"><i class="tr-color hc-color3"></i>20~33℃</li>
+		                    		<li class="tr-range"><i class="tr-color hc-color4"></i>33~39℃</li>
+		                    		<li class="tr-range"><i class="tr-color hc-color9"></i>>39℃</li>
+		                    	</ul>
+			                    <div id="hc-ztMap2" class="hc-com"></div>
+			                    <div id="hc-ztMap3" class="hc-com" style="display:none"></div>
+			                    <div id="hc-ztMap4" class="hc-com" style="display:none"></div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			            </div>
+		        	</div>
+		        	<div class="tab-hide tab-div" id="sq-js">
+			        	<div class="col01">
+			                <ul class="sq-legends">
+			                    <li><i class="tr-color js-color1"></i>小雨（1~24.9mm）</li>
+			                    <li><i class="tr-color js-color2"></i>中雨（25~49.9mm）</li>
+			                    <li><i class="tr-color js-color7"></i>大雨（50~100mm）</li>
+			                    <li><i class="tr-color js-color9"></i>暴雨（>100mm）</li> 
+			                </ul>
+			            	<div class="chart tr-hc-js" id="js-trsq" ></div>
+			               
+			                <div class="box">
+			                    <div class="title"><h2>近一年降水量分析</h2></div>
+			                    <div class="chart" style="width:500px;height:155px;">
+			                        <div id="nystLine7" style="width:560px;height:240px;top:-30px;"></div>
+			                    </div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>  
+			            </div>
+			            <div class="col02">
+			                <div class="box row01">
+			                    <div class="title"><h2>近1季度降水量变化曲线</h2></div>
+		                    	<div class="chart" style="width:495px;height:160px;margin:0px auto 0;">
+									<div id="nystLine8" style="width:560px;height:380px;left:-5%;"></div>
+		                    	</div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			                <div class="box row03" id="evenjs">
+			                    <div class="title"><h2>未来全省降水量预测</h2></div>
+			                    <ul class="tabs-btn">
+			                        <li class="actives dst">第3天</li>
+			                        <li class="dwt">第5天</li>
+			                        <li class="dqt">第7天</li>
+			                    </ul>
+			                    <ul id="js-ztMap">
+		                    		<li class="tr-range"><i class="tr-color js-color1"></i>1~24.9mm</li>
+		                    		<li class="tr-range"><i class="tr-color js-color2"></i>25~49.9mm</li>
+		                    		<li class="tr-range"><i class="tr-color js-color7"></i>50~100mm</li>
+		                    		<li class="tr-range"><i class="tr-color js-color9"></i>>100mm</li>
+		                    	</ul>
+			                    <div id="js-ztMap2" class="js-com"></div>
+			                    <div id="js-ztMap3" class="js-com" style="display:none"></div>
+			                    <div id="js-ztMap4" class="js-com" style="display:none"></div>
+			                    <i class="left-top"></i>
+			                    <i class="right-top"></i>
+			                    <i class="right-bottom"></i>
+			                    <i class="left-bottom"></i>
+			                </div>
+			            </div>
+		        	</div>
+	       
+	            </div>
+	         </div>
+	   	</div> 
+		<script src="js/jquery.min.js"></script>
+	    <script src="js/jquery.sliderPro.min.js"></script>
+	    <script src="js/index.js"></script>
+	    <script type="text/javascript" src="js/echarts.min.js" ></script>
+	    <script type="text/javascript" src="js/nystMap.js" ></script>
+		<script src="js/nyst.js"></script>
+		<script>
+		    $(function() {
+		        //下拉菜单
+		        $(".menu").mouseover(function(){
+		            $("#menuItems").slideDown();
+		        });
+		        $("#menuItems").mouseleave(function(){
+		            $(this).slideUp();
+		        })
+				
+		        //全屏铺满
+		        var ratioX = $(window).width()/1920;
+		        var ratioY = $(window).height()/1080;
+		        $("body").css({
+		            transform: "scale("+ratioX+","+ratioY+")",
+		            transformOrigin: "left top",
+		            backgroundSize: "100% 100%",
+		        });
+		    });
+		    //调整浏览器窗口全屏铺满
+		    $(window, document).resize(function() {
+		        var ratioX = $(window).width()/1920;
+		        var ratioY = $(window).height()/1080;
+		        $("body").css({
+		            transform: "scale("+ratioX+","+ratioY+")",
+		            transformOrigin: "left top",
+		            backgroundSize: "100% 100%"
+		        });
+		    });
+		    //给地图增加点击事件
+		</script>
+	</body>
+</html>

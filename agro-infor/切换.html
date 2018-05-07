@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>自动切换的选项卡</title>
+	<style>
+		.tab{
+			width:100px;
+			height:25px;
+			background-color:#ccc;
+			margin:0;padding:0;
+			border-right:1px solid #666;
+			}
+		.tab_on{
+			width:100px;
+			height:25px;
+			background-color:#eee;
+			margin:0;padding:0;
+			border-bottom:1px solid #666;
+			border-top:1px solid #666;
+			border-left:1px solid #666;
+		}
+		#show{
+			width:200px;
+			height:100px;
+			background-color:#eee;
+			border-bottom:1px solid #666;
+			border-top:1px solid #666;
+			border-right:1px solid #666;
+			line-height:30px;
+		}
+	</style>
+	<script language="javascript" type="text/javascript">
+	
+		var n=1;
+		var time=1000;
+		var strArr=new Array();
+			strArr[0]="我们提供";
+			strArr[1]="高质量脚本下载";
+			strArr[2]="欢迎光临小站";
+			strArr[3]="精品网页特效";
+		function init(){document.getElementById("show").innerHTML = strArr[0];}
+		function show(){
+			 n=n>strArr.length?1:n;//如果n>数组长度 则重新赋值为1，以便程序循环
+			 for(i=1;i<(strArr.length+1);i++){//这里for用来改变当前tab的classname
+			 if(i==n) document.getElementById("tab_"+i).className = "tab_on";
+			 else document.getElementById("tab_"+i).className = "tab";
+		 }
+			 document.getElementById("show").innerHTML = strArr[n-1];//现实数据
+			 n++;
+		}
+		 setInterval("show()",time);//隔一秒执行一次
+		//-->
+	</script>
+</head>
+<body onload="init()">
+<table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#eeeeee">
+ <tr>
+  <td align="right">
+  <div id="tab_1" class="tab_on">ASP</div>
+  <div id="tab_2" class="tab" >PHP</div>
+  <div id="tab_3" class="tab" >JSP</div>
+  <div id="tab_4" class="tab">JAVA</div>
+  </td>
+  <td bgcolor="#eeeeee">
+  <div id="show"></div>
+  </td>
+ </tr>
+</table>
+</body>
+</html>

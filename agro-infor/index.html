@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>浙江省智慧农业云平台</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/slider-pro.min.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/echarts.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="header">
+        <h1><img src="images/logo.png" width="420" height="43" /></h1>
+    </div>
+    <span class="menu"></span>
+    <ul id="menuItems" class="menu-items" style="display:none">
+        <li class="active">首页</li>
+        <li><a href="ncjy.html">农村经营</a></li>
+        <li><a href="nyst.html">农业生态</a></li>
+        <li><a href="zlaq.html">质量安全</a></li>
+        <li><a href="ncpjg.html">农产品价格</a></li>
+        <li><a href="xmjg.html">畜牧监管</a></li>
+        <li><a href="zhnj.html">智慧农机</a></li>
+        <i class="left-top"></i>
+        <i class="right-top"></i>
+        <i class="right-bottom"></i>
+        <i class="left-bottom"></i>
+    </ul>
+    <div class="wraprow">
+        <div class="col01">
+            <div class="row01">
+                <div id="totalData" class="slider-pro total-data">
+                    <div class="sp-slides">
+                        <div class="sp-slide">
+                            <h2>农林牧副渔总产值</h2>
+                            <div class="number">
+                                <div class="num-value">3146.06</div><i>亿元</i>
+                            </div>
+                        </div>
+                        <div class="sp-slide">
+                            <h2>农作物总播种面积</h2>
+                            <div class="number">
+                                <div class="num-value">3146.06</div><i>万亩</i>
+                            </div>
+                        </div>
+                        <div class="sp-slide">
+                            <h2>人均居民人均纯收入</h2>
+                            <div class="number">
+                                <div class="num-value">3146.06</div><i>元</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box row02">
+                <div class="title"><h2>农林牧副渔总产值</h2></div>
+                <div class="charts" style="width:520px;height:160px;margin:0 auto 20px;">
+					<div id="echartsScatter" class="scatter" style="height:210px;width:580px;"></div>
+                </div>
+                <div class="charts" style="width:520px;height:150px;margin:0 auto;">
+					<div id="echartsPie" class="pie"></div>
+					<table class="table-box">
+						<tr class="table-head">
+						    <td class="com classify">分类</td>
+						    <td class="com value">产值</td>
+						    <td class="com proportion">占比</td>
+						 </tr>
+						<tr class="table-centers">
+							<td style="padding-right:70px;"><i class="icon1 icon-com"></i>农业</td>
+							<td style="padding-right:70px;"><i>￥</i>4,544</td>
+							<td>36%</td>
+						</tr>
+						<tr class="table-centers">
+							<td><i class="icon2 icon-com"></i>林业</td>
+							<td><i>￥</i>4,544</td>
+							<td>36%</td>
+						</tr>
+						<tr class="table-centers">
+							<td><i class="icon3 icon-com"></i>牧业</td>
+							<td><i>￥</i>4,544</td>
+							<td>433</td>
+						</tr>
+						<tr class="table-centers">
+							<td><i class="icon4 icon-com"></i>渔业</td>
+							<td><i>￥</i>4,544</td>
+							<td>36%</td>
+						</tr>
+						<tr class="table-centers">
+							<td><i class="icon5 icon-com"></i>农林牧渔服务业</td>
+							<td><i>￥</i>4,544</td>
+							<td>36%</td>
+						</tr>
+					</table>
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+        </div>
+        <div class="col02">
+            <div class="charts" style="height:597px;position:relative;">
+                <ul id="mapBtn" class="legend">            	
+                    <li class="active"><i class="ls"></i>粮食</li>
+                    <li><i class="cy"></i>茶叶</li>
+                    <li><i class="syj"></i>食用菌</li>
+                    <li><i class="hh"></i>花卉</li>
+                    <li><i class="sc"></i>蔬菜</li>
+                    <li><i class="zcy"></i>中药材</li>
+                    <li><i class="sg"></i>水果</li>
+                    <li><i class="cs"></i>桑蚕</li>
+                    <li><i class="xm"></i>畜牧</li>                    
+                </ul>
+        	 	<ul class="maps" id="liangsh">
+                    <li>
+                        <div class="ect" id="main5a"></div>
+                        <div>
+                            <div id="wz1" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz1" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb1" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz1" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls1" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz1" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh1" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx1" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz1" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx1" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs1" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+                    </li>
+               </ul>
+               	<ul class="maps" id="chay" style="display:none;">
+               		<li>
+               			<div class="ect" id="main6a"></div>
+               			<div>
+                        	<div id="wz2" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz2" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb2" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz2" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls2" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz2" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh2" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx2" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz2" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx2" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs2" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="syjun" style="display:none;">
+               		<li>
+               			<div class="ect" id="main7a"></div>
+               			<div>
+                        	<div id="wz3" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz3" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb3" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz3" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls3" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz3" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh3" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx3" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz3" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx3" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs3" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="huah" style="display:none;">
+               		<li>
+               			<div class="ect" id="main8a"></div>
+               			<div>
+                        	<div id="wz4" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz4" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb4" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz4" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls4" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz4" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh4" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx4" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz4" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx4" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs4" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="shuc" style="display:none;">
+               		<li>
+               			<div class="ect" id="main9a"></div>
+               			<div>
+                        	<div id="wz5" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz5" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb5" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz5" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls5" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz5" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh5" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx5" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz5" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx5" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs5" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="zhongyc" style="display:none;">
+               		<li>
+               			<div class="ect" id="main10a"></div>
+               			<div>
+                        	<div id="wz6" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz6" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb6" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz6" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls6" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz6" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh6" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx6" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz6" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx6" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs6" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="shuig" style="display:none;">
+               		<li>
+               			<div class="ect" id="main11a"></div>
+               			<div>
+                        	<div id="wz7" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz7" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb7" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz7" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls7" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz7" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh7" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx7" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz7" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx7" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs7" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps" id="cans" style="display:none;">
+               		<li>
+               			<div class="ect" id="main12a"></div>
+               			<div>
+                        	<div id="wz8" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz8" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb8" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz8" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls8" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz8" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh8" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx8" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz8" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx8" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs8" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>
+               		</li>
+               	</ul>
+               	<ul class="maps"  id="xum" style="display:none;">
+               		<li>
+               			<div class="ect" id="main13a"></div>
+               			<div>
+                        	<div id="wz9" class="wz1" style="width: 40px;height:40px;"></div>
+                            <div id="hz9" class="hz1" style="width: 40px;height:40px;"></div>
+                            <div id="nb9" class="nb1" style="width: 40px;height:40px;"></div>
+                            <div id="tz9" class="tz1" style="width: 40px;height:40px;"></div>
+                            <div id="ls9" class="ls1" style="width: 40px;height:40px;"></div>
+                            <div id="qz9" class="qz1" style="width: 40px;height:40px;"></div>
+                            <div id="jh9" class="jh1" style="width: 40px;height:40px;"></div>
+                            <div id="sx9" class="sx1" style="width: 40px;height:40px;"></div>
+                            <div id="huz9" class="huz1" style="width: 40px;height:40px;"></div>
+                            <div id="jx9" class="jx1" style="width: 40px;height:40px;"></div>
+                            <div id="zs9" class="zs1" style="width: 40px;height:40px;"></div>
+                        </div>     
+               		</li>
+               	</ul>                        
+            </div>
+        </div>
+        <div class="col03">
+            <div class="box row01">
+                <div class="title"><h2>城镇居民收入分析</h2></div>
+                <div class="charts" style="width:480px;height:130px;margin:16px auto 0;">
+                    <div class="city-left fl city-width">
+                        		<p class="town">城镇人均收入</p>
+                        		<p class="money"><span>￥</span>24325</p>
+                        		<div class="container1 contain-com"> 
+									<div id="bar1"class="bar-com" style="width:0%;"></div>  
+								</div> 
+                        	</div>
+                        	<div class="city-center fl city-width">
+                        		<p class="town">农民人均收入</p>
+                        		<p class="money"><span>￥</span>24325</p>
+                        		<div class="container2 contain-com"> 
+									<div id="bar2" class="bar-com" style="width:0%;"></div>  
+								</div> 
+                        	</div>
+                        	<div class="city-right fl city-width">
+                        		<p class="town">城乡收入比</p>
+                        		<div id="cityPie" class="city-pie"></div>
+                        	</div>
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+            <div class="box row02">
+                <div class="title"><h2>农村居民人均纯收入趋势</h2></div>
+                <div class="charts" style="width:480px;height:230px;margin:10px auto 0;">
+                    <div id="incomBar" class="incomeBar"></div>
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+        </div>
+    </div>
+    <div class="wraprow">
+        <div class="box col04">
+            <div class="title"><h2>农作物总播种面积</h2></div>
+            <div id="totalSow" class="slider-pro total-sow">
+                <div class="sp-slides">
+                    <div class="charts" style="width:520px;height:160px;margin:0 auto;">
+                       <div id="echartsBar" style="height:190px;width:580px;"></div>
+                    </div>
+                    <div class="charts" style="width:520px;height:80px;margin:20px auto 0;">
+                        <ul class="sow-type">
+                            <li class="sow-type-li">
+                             	<div id="echartsPie1" class="pie-left"></div>
+								<ul class="pie-right pie-right1">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                             	
+                            </li>
+                            <li class="sow-type-li">
+                            	<div id="echartsPie2" class="pie-left"></div>
+								<ul class="pie-right pie-right2">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                            <li class="sow-type-li">
+                            	<div id="echartsPie3" class="pie-left"></div>
+								<ul class="pie-right pie-right3">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                            <li class="sow-type-li">
+                             	<div id="echartsPie4" class="pie-left"></div>
+								<ul class="pie-right pie-right4">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="charts" style="display:none; width:520px;height:160px;margin:0 auto;">
+                    	<div id="echartsBar2" style="height:190px;width:580px;"></div>
+                    </div>
+                    <div class="charts" style="display:none;width:520px;height:80px;margin:20px auto 0;">
+                        <ul class="sow-type">
+                            <li class="sow-type-li">
+                             	<div id="echartsPie5" class="pie-left"></div>
+								<ul class="pie-right pie-right1">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                             	
+                            </li>
+                            <li class="sow-type-li">
+                            	<div id="echartsPie6" class="pie-left"></div>
+								<ul class="pie-right pie-right2">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                            <li class="sow-type-li">
+                            	<div id="echartsPie7" class="pie-left"></div>
+								<ul class="pie-right pie-right3">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                            <li class="sow-type-li">
+                             	<div id="echartsPie8" class="pie-left"></div>
+								<ul class="pie-right pie-right4">
+									<li class="farm pie-color">春粮</li>
+									<li class="product pie-color">面积</li>
+									<li class="pie-num">131254</li>
+								</ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+        <div class="box col05">
+            <ul id="tabsTitle" class="tabs-title">
+                <li class="active">粮食</li>
+                <li>茶叶</li>
+                <li>食用菌</li>
+                <li>花卉</li>
+                <li>蔬菜</li>
+                <li>中药材</li>
+                <li>水果</li>
+                <li>桑蚕</li>
+                <li>畜牧</li>
+            </ul>
+            <div id="tabsCy">
+				<div id="lsh" class="box-con">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea1" style="height:210px;width:520px;"></div>
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                    		<div id="echartsLineArea2" style="height:210px;width:520px;"></div>
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">粮食产量种类</span>
+                            <li>
+                                <span class="fl">油料</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container3 container-com"> 
+										<div id="bar3" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">棉花</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container4 container-com"> 
+										<div id="bar4" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">麻类</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container5 container-com"> 
+										<div id="bar5" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">糖料</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container6 container-com"> 
+										<div id="bar6" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+				<div id="chaye" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea3" style="height:210px;width:520px;"></div>
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea4" style="height:210px;width:520px;"></div>
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">茶叶产量种类</span>
+                            <li>
+                                <span class="fl">春茶</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container7 container-com"> 
+										<div id="bar7" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">夏茶</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container8 container-com"> 
+										<div id="bar8" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">秋茶</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container9 container-com"> 
+										<div id="bar9" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+				<div id="shiyjun" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea5" style="height:210px;width:520px;"></div>
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea6" style="height:210px;width:520px;"></div>   
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">食用菊产量种类</span>
+                            <li>
+                                <span class="fl">鲜蘑菇</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container10 container-com"> 
+										<div id="bar10" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">鲜香菇</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container11 container-com"> 
+										<div id="bar11" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">鲜金针菇</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container12 container-com"> 
+										<div id="bar12" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">鲜平菇</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container13 container-com"> 
+										<div id="bar13" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+                <div id="huahui" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:260px;margin-top:10px">
+                            <div id="echartsLineArea7" style="height:290px;width:520px;"></div>                           
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:260px;margin-top:10px">
+                            <div id="echartsLineArea8" style="height:290px;width:520px;"></div>                          
+                        </div>
+                    </div>
+				</div>
+                <div id="shucai" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea9" style="height:210px;width:520px;"></div>          
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea10" style="height:210px;width:520px;"></div>
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">蔬菜产量种类</span>
+                            <li>
+                                <span class="fl">叶菜类</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container14 container-com"> 
+										<div id="bar14" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">白菜类</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container15 container-com"> 
+										<div id="bar15" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">甘蓝类</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container16 container-com"> 
+										<div id="bar16" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">瓜菜类</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container17 container-com"> 
+										<div id="bar17" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+                <div id="zhongycai" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea11" style="height:210px;width:520px;"></div>                    
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea12" style="height:210px;width:520px;"></div>  
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">中药材产量种类</span>
+                            <li>
+                                <span class="fl">杭白菊</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container18 container-com"> 
+										<div id="bar18" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">白术</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container19 container-com"> 
+										<div id="bar19" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">玄参</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container20 container-com"> 
+										<div id="bar20" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">灵芝</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container21 container-com"> 
+										<div id="bar21" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+                <div id="shuiguo" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea13" style="height:210px;width:520px;"></div>                            
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea14" style="height:210px;width:520px;"></div> 
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">水果产量种类</span>
+                            <li>
+                                <span class="fl">柑桔</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container22 container-com"> 
+										<div id="bar22" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">桃子</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container23 container-com"> 
+										<div id="bar23" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">杨梅</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container24 container-com"> 
+										<div id="bar24" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">枇杷</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container25 container-com"> 
+										<div id="bar25" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+                <div id="sangc" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea15" style="height:210px;width:520px;"></div>                           
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea16" style="height:210px;width:520px;"></div>   
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">桑蚕产量种类</span>
+                            <li>
+                                <span class="fl">春蚕</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container26 container-com"> 
+										<div id="bar26" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">夏蚕</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container27 container-com"> 
+										<div id="bar27" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">秋蚕</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container28 container-com"> 
+										<div id="bar28" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+                <div id="xumu" class="box-con" style="display:none;">
+                    <div class="l-con">
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万亩</i>面积
+                        </div>
+                        <div class="con-value">
+                            <i>1324364</i><i>单位：万吨</i>产量
+                        </div>
+                    </div>
+                    <div class="r-con">
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea17" style="height:210px;width:520px;"></div>                          
+                        </div>
+                        <div class="charts" style="display:inline-block;width:475px;height:160px;margin:0">
+                            <div id="echartsLineArea18" style="height:210px;width:520px;"></div>                          
+                        </div>
+                        <ul class="ls-type">
+                            <span class="type-tit" style="margin:-18px 0 20px;">畜牧产量种类</span>
+                            <li>
+                                <span class="fl">猪肉</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container29 container-com"> 
+										<div id="bar29" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">牛肉</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container30 container-com"> 
+										<div id="bar30" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">羊肉</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container31 container-com"> 
+										<div id="bar31" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="fl">禽肉</span>
+                                <span class="num fr">123456万吨</span>
+                                <div style="clear:both"></div>
+                                <div class="charts" style="height:48px;margin:0">
+                                    <div class="container32 container-com"> 
+										<div id="bar32" class="bar-com" style="width:0%;"></div>  
+									</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/echarts.common.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/index-echarts.js" ></script>
+    <script type="text/javascript" src="js/drawMap.js" ></script>
+    <script>
+    $(function() {
+        //下拉菜单
+        $(".menu").mouseover(function(){
+            $("#menuItems").slideDown();
+        });
+        $("#menuItems").mouseleave(function(){
+            $(this).slideUp();
+        })
+        //轮播      
+        $("#totalData").sliderPro({
+            width: '585',
+            height: '167',
+            autoHeight: false,
+            slideDistance: 0,
+            autoplayDelay: 3300,
+            autoplay: true
+        });
+        //全屏铺满
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+    });
+    //调整浏览器窗口全屏铺满
+    $(window, document).resize(function() {
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+    });
+</script>
+</body>
+</html>

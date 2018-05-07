@@ -1,0 +1,237 @@
+.wraprow {
+    display: -webkit-flex;
+    display: flex;
+    width: 1872px;
+    margin: 0 auto;
+}
+.col01,.col04{
+    width: 585px;
+    margin-right: 36px;
+}
+.col01 .row01 {
+    height: 149px;
+    margin-bottom: 48px;
+}
+.col01 .row02 {
+    height: 398px;
+}
+.col02 {
+    width: 663px;
+    margin-right: 36px;
+}
+.col03 {
+    width: 552px;
+}
+.col03 .row01 {
+    height: 230px;
+}
+.col03 .row02 {
+    height: 315px;
+}
+
+.col05 {
+    width: 1251px;
+}
+.col04,.col05 {
+    height: 330px;
+}
+/* 轮播圆点导航 */
+#totalData .sp-buttons{
+    bottom: 40px;
+}
+#totalSow .sp-buttons{
+    bottom: 0;
+}
+.total-data {
+    position: relative;
+    top: 9px;
+}
+.total-data i{
+    font-size: 36px;
+    color: #909098;
+}
+.zcz{
+    height: 398px;
+}
+.zbz{
+    height: 327px;
+}
+.zsr{
+    height: 227px;
+}
+.rjsr{
+    height: 320px;
+}
+.cyq{
+    height: 328px;
+}
+.total-sow .sp-slide{
+    width:585px;
+}
+.sow-type .sow-type-li{
+    display: inline-block;
+    width: 110px;
+    height: 60px;
+    margin-right: 10px;
+}
+.sow-type .sow-type-li:last-child{
+    margin-right:0;
+}
+.r-row{
+    height: 599px;
+    margin-bottom: 48px;
+}
+.map{
+    position: relative;
+    width: 662px;
+    margin-right: 36px;
+}
+.legend{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 108px;
+    height: 262px;
+    padding: 10px 15px;
+    background-color: #1a1948;
+    z-index: 1
+}
+.legend li{
+    position: relative;
+    padding: 8px;
+    font-size: 13px;
+    text-align: left;
+    text-indent: 2.6em;
+    background-position: 14px 7px;
+    cursor: default;
+}
+.legend li:hover{
+	cursor:pointer;
+}
+.ls,.cy,.hh,.syj,.sc,.zcy,.sg,.cs,.xm{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    display: inline-block;
+    width:22px;
+    height:16px;
+}
+.ls{
+    background: url("../images/ls.png") no-repeat;
+}
+.cy{
+    background: url("../images/cy.png") no-repeat;
+}
+.hh{
+    background: url("../images/hh.png") no-repeat;
+}
+.syj{
+    background: url("../images/syj.png") no-repeat;
+}
+.sc{
+    background: url("../images/sc.png") no-repeat;
+}
+.zcy{
+    background: url("../images/zcy.png") no-repeat;
+}
+.sg{
+    background: url("../images/sg.png") no-repeat;
+}
+.cs{
+    background: url("../images/cs.png") no-repeat;
+}
+.xm{
+    background: url("../images/xm.png") no-repeat;
+}
+/*.legend li:hover{
+    background: url("../images/circle.png") no-repeat;
+    background-position: 0 11px;
+    color: #00d3ff;
+}*/
+.legend li.active{
+    background: url("../images/circle.png") no-repeat;
+    background-position: 0 11px;
+    color: #00d3ff;
+}
+.row-box{
+    width: 589px;
+}
+.tabs-title{
+    position: absolute;
+    top: -1px;
+    text-align: left;
+    margin-left: 35px;
+    z-index: 1
+}
+.tabs-title li{
+    display: inline-block;
+    width: 108px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #171546;
+    border: solid 1px #1f1c62;
+    cursor: pointer;
+}
+.tabs-title li.active{
+    border: solid 1px #0d8aa7;
+    background-color: #0d8aa7;
+    cursor: default;
+}
+.box-con{
+    display: flex;
+    margin: 48px 35px 0;
+    height: 100px;
+}
+.l-con{
+    width: 204px;
+    margin-right: 20px;
+}
+.con-value{
+    height: 105px;
+    margin: 10px 0 20px;
+    padding-top: 5px;
+    background-color: #121135;
+    border-top: solid 2px #1f336e;
+    border-bottom: solid 2px #1f336e;
+}
+.con-value i{
+    display: block;
+    margin: 12px;
+}
+.con-value i:nth-child(1) {
+    font-size: 24px;
+}
+.con-value i:nth-child(2) {
+    font-size: 12px;
+    color: #999;
+}
+.r-con{
+    width: 960px;
+}
+.ls-type{
+    margin: 0 15px;
+    text-align: left;
+}
+.type-tit{
+    display: block;
+    margin: 15px 0 20px;
+   
+    text-align: left;
+}
+.ls-type li .num{
+    color: #4dd3e2;
+}
+.ls-type li{
+    display: inline-block;
+    width: 210px;
+    height: 48px;
+    margin-right: 24px;
+
+}
+.ls-type li:last-child{
+    margin: 0;
+}
+.charts{
+    /*background-color: grey*/
+}

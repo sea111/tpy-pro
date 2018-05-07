@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/reset.css" rel="stylesheet" />
+	    <link href="css/slider-pro.min.css" rel="stylesheet" />
+	    <link href="css/common.css" rel="stylesheet" />
+	    <link href="css/ncpjg.css" rel="stylesheet" />
+	    <link href="css/echarts.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="header">
+	        <h1><img src="images/logo.png" width="420" height="43" /></h1>
+	    </div>
+	    <span class="menu"></span>
+	    <ul id="menuItems" class="menu-items" style="display:none">
+	        <li><a href="index.html">首页</a></li>
+	        <li><a href="ncjy.html">农村经营</a></li>
+	        <li><a href="nyst.html">农业生态</a></li>
+	        <li><a href="zlaq.html">质量安全</a></li>
+	        <li class="active">农产品价格</li>
+	        <li><a href="xmjg.html">畜牧监管</a></li>
+	        <li><a href="zhnj.html">智慧农机</a></li>
+	        <i class="left-top"></i>
+	        <i class="right-top"></i>
+	        <i class="right-bottom"></i>
+	        <i class="left-bottom"></i>
+	    </ul>
+	    <div id="tabsFull">	
+	    	<div class="wraprow clearfix" id="tab-1">
+	            <div class="col01 box">
+	            	<ul class="ncp-type">
+	            		<li class="active ncp-com sc">蔬菜类</li>
+	            		<li class="ncp-com gp">果品类</li>
+	            		<li class="ncp-com ly">粮油类</li>
+	            		<li class="ncp-com shuic">水产类</li>
+	            		<li class="ncp-com tc">特产类</li>
+	            		<li class="ncp-com rl">肉类</li>
+	            		<li class="ncp-com zyc">中药材</li>
+	            		<li class="ncp-com yll">原粮类</li>
+	            		<li class="ncp-com sl">饲料/饲料粮</li>
+	            		<li class="ncp-com cl">茶类</li>
+	            	</ul>
+	            	<div class="rzy-price" id="scl">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="scl-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasc1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasc2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="scl-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasc3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasc4" style="width:900px;height:270px;"></div>
+	            			<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="scl-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasc5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasc6" style="width:900px;height:270px;"></div>
+	            			<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="gpl" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="gpl-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreagp1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreagp2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="gpl-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreagp3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreagp4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="gpl-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreagp5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreagp6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="lyl" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="lyl-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArealy1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArealy2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="lyl-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArealy3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArealy4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="lyl-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArealy5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArealy6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="shuicl" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="shuicl-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreashuic1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreashuic2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="shuicl-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreashuic3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreashuic4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="shuicl-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreashuic5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreashuic6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="tcl" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="tcl-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreatc1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreatc2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="tcl-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreatc3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreatc4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="tcl-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreatc5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreatc6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="roul" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="roul-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArearou1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArearou2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="roul-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArearou3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArearou4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="roul-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgArearou5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgArearou6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="zyc" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="zyc-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreazy1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreazy2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="zyc-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreazy3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreazy4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="zyc-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreazy5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreazy6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="yll" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="yll-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreayl1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreayl2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="yll-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreayl3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreayl4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="yll-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreayl5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreayl6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="sil" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="sil-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasil1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasil2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="sil-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasil3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasil4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="sil-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreasil5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreasil6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+	            	<div class="rzy-price" id="cal" style="display:none;">
+	            		<ul class="rzy-nav">
+	            			<li class="active rzy-nav-com rpjj">
+	            				<p>日平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com zpjj">
+	            				<p>周平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com down-green"></i></p>
+	            			</li>
+	            			<li class="rzy-nav-com ypjj">
+	            				<p>月平均价:<span class="price-color">10.00</span>元</p>
+	            				<p>同比<i class="up-arrow"></i>0.5%<i class="arrow-com up-red"></i></p>
+	            			</li>
+	            		</ul>
+	            		<div id="cal-rpjj"> 
+		            		<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreacal1" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreacal2" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="cal-zpjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreacal3" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreacal4" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            		<div id="cal-ypjj" style="display:none;">
+	            			<div class="nj-cz">
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>年均价</span>
+		            			<span class="njj-zcz"><i class="nj-cz-com"></i>总产值</span>
+		            		</div>
+		            		<div id="ncpjgAreacal5" style="width:900px;height:270px;"></div>
+		            		<div id="ncpjgAreacal6" style="width:900px;height:270px;"></div>
+		            		<div class="price-down">
+		            			<p class="price-down-con"><i class="price-down-icon"></i>价格涨跌</p>
+		            			<ul class="sp-type sp-type-one">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>
+		            			<ul class="sp-type sp-type-two">
+		            				<li class="sp-type-com sp-head">
+		            					<span>商品</span><span class="pjj-head">平均价(元/公斤)</span><span>涨幅度</span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>西红柿</span><span class="pjj" style="margin-left:76px;">3元/公斤</span><span>0.3&nbsp;&nbsp;<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>黄瓜</span><span class="pjj">3元/公斤</span><span>0.26<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>毛豆</span><span class="pjj">3元/公斤</span><span>0.24<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>土豆</span><span class="pjj">3元/公斤</span><span>0.2&nbsp;&nbsp;<i class="arrow-com down-green"></i></span>
+		            				</li>
+		            				<li class="sp-type-com">
+		            					<span>平菇</span><span class="pjj">3元/公斤</span><span>0.19<i class="arrow-com up-red"></i></span>
+		            				</li>
+		            			</ul>	
+		            		</div>
+	            		</div>
+	            	</div>
+               		<i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+	            </div>
+	            <div class="col02">
+	                <div class="box row01">
+	                    <div class="title"><h2>单品价格分析</h2></div>   
+	                    <ul class="tabs-btn">
+	                        <li class="actives jr">今日</li>
+	                        <li class="jqr">近7日</li>
+	                        <li class="jy">近月</li>
+	                        <li class="bn">本年</li>
+	                    </ul>
+	                    <select class="dp-sc dp-com">
+				    		<option>蔬菜类</option>
+				    		<option>果品类</option>
+				    		<option>粮油类</option>
+				    		<option>水产类</option>
+				    		<option>特产类</option>
+				    		<option>肉类</option>
+				    		<option>中药材</option>
+				    		<option>原粮类</option>
+				    		<option>饲料/饲料粮</option>
+				    		<option>茶类</option>
+				    	</select>
+				    	<select class="dp-xhs dp-com">
+				    		<option>西红柿</option>
+				    		<option>黄瓜</option>
+				    		<option>毛豆</option>
+				    		<option>土豆</option>
+				    		<option>平菇</option>
+				    	</select>
+	                    <div id="jinr">
+		                    <ul class="dpjg-nav">
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">日平均价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最高价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最低价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            		</ul>
+		            		<ul class="ncpjg-maps">
+				                <li>
+				                    <i class="hz green">2.7元/公斤</i>
+				                    <i class="nb">2.9元/公斤</i>
+				                    <i class="wz yellow">5.0元/公斤</i>
+				                    <i class="tz">3.3元/公斤</i>
+				                    <i class="ls">2.9元/公斤</i>
+				                    <i class="qz">4.3元/公斤</i>
+				                    <i class="zs">4.0元/公斤</i>
+				                    <i class="huz">4.0元/公斤</i>
+				                    <i class="jx">2.9元/公斤</i>
+				                    <i class="sx">4.0元/公斤</i>
+				                    <i class="jh">4.3元/公斤</i>
+				                </li>
+				            </ul>
+		            		<ul id="zg-zd">
+			                	<li><i class="zg-zd-com yellow"></i>最高价格区域</li>
+			                	<li><i class="zg-zd-com green"></i>最低价格区域</li>
+			                </ul>
+		            		<div id="ncpjgMap" style="width:580px;height:580px;"></div>
+                    	</div>
+                    	<div id="jinqr" style="display:none;">
+                    		<ul class="dpjg-nav">
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">日平均价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最高价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最低价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            		</ul>
+		            		<ul class="ncpjg-maps">
+				                <li>
+				                    <i class="hz green">2.7元/公斤</i>
+				                    <i class="nb">2.9元/公斤</i>
+				                    <i class="wz yellow">5.0元/公斤</i>
+				                    <i class="tz">3.3元/公斤</i>
+				                    <i class="ls">2.9元/公斤</i>
+				                    <i class="qz">4.3元/公斤</i>
+				                    <i class="zs">4.0元/公斤</i>
+				                    <i class="huz">4.0元/公斤</i>
+				                    <i class="jx">2.9元/公斤</i>
+				                    <i class="sx">4.0元/公斤</i>
+				                    <i class="jh">4.3元/公斤</i>
+				                </li>
+				            </ul>
+		            		<ul id="zg-zd">
+			                	<li><i class="zg-zd-com yellow"></i>最高价格区域</li>
+			                	<li><i class="zg-zd-com green"></i>最低价格区域</li>
+			                </ul>
+		            		<div id="ncpjgMap2" style="width:580px;height:580px;"></div>
+                    	</div>
+                    	<div id="jiny" style="display:none;">
+                    		<ul class="dpjg-nav">
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">日平均价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最高价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最低价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            		</ul>
+		            		<ul class="ncpjg-maps">
+				                <li>
+				                    <i class="hz green">2.7元/公斤</i>
+				                    <i class="nb">2.9元/公斤</i>
+				                    <i class="wz yellow">5.0元/公斤</i>
+				                    <i class="tz">3.3元/公斤</i>
+				                    <i class="ls">2.9元/公斤</i>
+				                    <i class="qz">4.3元/公斤</i>
+				                    <i class="zs">4.0元/公斤</i>
+				                    <i class="huz">4.0元/公斤</i>
+				                    <i class="jx">2.9元/公斤</i>
+				                    <i class="sx">4.0元/公斤</i>
+				                    <i class="jh">4.3元/公斤</i>
+				                </li>
+				            </ul>
+		            		<ul id="zg-zd">
+			                	<li><i class="zg-zd-com yellow"></i>最高价格区域</li>
+			                	<li><i class="zg-zd-com green"></i>最低价格区域</li>
+			                </ul>
+		            		<div id="ncpjgMap3" style="width:580px;height:580px;"></div>
+                    	</div>
+                    	<div id="benn" style="display:none;">
+                    		<ul class="dpjg-nav">
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">日平均价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最高价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            			<li class="dpjg-nav-com">
+		            				<p class="junj-com">最低价:</p>
+		            				<p class="dpjg-price"><span class="dpjg-money">3.33</span>元/公斤</p>
+		            				<p class="dpjg-hb">环比<i class="up-arrow"></i>12%</p>
+		            			</li>
+		            		</ul>
+		            		<ul class="ncpjg-maps">
+				                <li>
+				                    <i class="hz green">2.7元/公斤</i>
+				                    <i class="nb">2.9元/公斤</i>
+				                    <i class="wz yellow">5.0元/公斤</i>
+				                    <i class="tz">3.3元/公斤</i>
+				                    <i class="ls">2.9元/公斤</i>
+				                    <i class="qz">4.3元/公斤</i>
+				                    <i class="zs">4.0元/公斤</i>
+				                    <i class="huz">4.0元/公斤</i>
+				                    <i class="jx">2.9元/公斤</i>
+				                    <i class="sx">4.0元/公斤</i>
+				                    <i class="jh">4.3元/公斤</i>
+				                </li>
+				            </ul>
+		            		<ul id="zg-zd">
+			                	<li><i class="zg-zd-com yellow"></i>最高价格区域</li>
+			                	<li><i class="zg-zd-com green"></i>最低价格区域</li>
+			                </ul>
+		            		<div id="ncpjgMap4" style="width:580px;height:580px;"></div>
+                    	</div>
+						<div id="ncpjgArea3" style="width:520px;height:260px;margin-left:16px;top:-95px;"></div>
+                    	<div id="ncpjgArea32" style="width:520px;height:260px;margin-left:16px;top:-95px;display:none;"></div>
+                    	<div id="ncpjgArea33" style="width:520px;height:260px;margin-left:16px;top:-95px;display:none;"></div>
+                    	<div id="ncpjgArea34" style="width:520px;height:260px;margin-left:16px;top:-95px;display:none;"></div>
+                    	<ul class="jgqs">
+                    		<li class="active jgqs-com jrjg">日价格走势</li>
+                    		<li class="jgqs-com yjj">月均价走势</li>
+                    		<li class="jgqs-com rnjj">历年均价对比</li>
+                    		<li class="jgqs-com rnjg">历年价格同比</li>
+                    	</ul>
+	                    <i class="left-top"></i>
+	                    <i class="right-top"></i>
+	                    <i class="right-bottom"></i>
+	                    <i class="left-bottom"></i>
+	                </div>
+	            </div>
+	       </div>
+	   	</div> 
+		<script src="js/jquery.min.js"></script>
+	    <script src="js/jquery.sliderPro.min.js"></script>
+	    <script src="js/index.js"></script>
+	    <script type="text/javascript" src="js/echarts.min.js" ></script>
+	    <script type="text/javascript" src="js/ncpjgMap.js" ></script>
+		<script src="js/ncpjg.js"></script>
+		<script>
+		    $(function() {
+		        //下拉菜单
+		        $(".menu").mouseover(function(){
+		            $("#menuItems").slideDown();
+		        });
+		        $("#menuItems").mouseleave(function(){
+		            $(this).slideUp();
+		        })
+				
+		        //全屏铺满
+		        var ratioX = $(window).width()/1920;
+		        var ratioY = $(window).height()/1080;
+		        $("body").css({
+		            transform: "scale("+ratioX+","+ratioY+")",
+		            transformOrigin: "left top",
+		            backgroundSize: "100% 100%",
+		        });
+		    });
+		    //调整浏览器窗口全屏铺满
+		    $(window, document).resize(function() {
+		        var ratioX = $(window).width()/1920;
+		        var ratioY = $(window).height()/1080;
+		        $("body").css({
+		            transform: "scale("+ratioX+","+ratioY+")",
+		            transformOrigin: "left top",
+		            backgroundSize: "100% 100%"
+		        });
+		    });
+		    //给地图增加点击事件
+		</script>
+	</body>
+</html>

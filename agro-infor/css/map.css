@@ -1,0 +1,63 @@
+ul.maps{
+    overflow: hidden;
+}
+ul.maps li{
+    float: left;
+    width: 650px;
+    height: 650px;
+}
+ul.maps li .wz1{
+    position: absolute;
+    bottom: 76px;
+    right: 312px;
+}
+ul.maps li .hz1{
+    position: absolute;
+    bottom: 365px;
+    right: 368px;
+}
+ul.maps li .nb1{
+    position: absolute;
+    bottom: 374px;
+    right: 226px;
+}
+ul.maps li .tz1{
+    position: absolute;
+    bottom: 214px;
+    right: 250px;
+}
+ul.maps li .ls1{
+    position: absolute;
+    bottom: 153px;
+    right: 385px;
+}
+ul.maps li .qz1{
+    position: absolute;
+    bottom: 244px;
+    right: 485px;
+}
+ul.maps li .jh1{
+    position: absolute;
+    bottom: 275px;
+    right: 365px;
+}
+ul.maps li .sx1{
+    position: absolute;
+    bottom: 336px;
+    right: 282px;
+}
+ul.maps li .huz1{
+    position: absolute;
+    bottom: 465px;
+    right: 368px;
+}
+ul.maps li .jx1{
+    position: absolute;
+    bottom: 431px;
+    right: 209px;
+}
+ul.maps li .zs1{
+    position: absolute;
+    bottom: 394px;
+    right: 116px;
+}

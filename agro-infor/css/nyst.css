@@ -1,0 +1,683 @@
+#tabsFull li{
+	display:inline-block;
+}
+.tabs-today {
+    position: absolute;
+    top: 66px;
+    left: 92px;
+    z-index: 4;
+}
+.tabs-today li {
+    display: inline-block;
+    width: 211px;
+    height:42px;
+    line-height:42px;
+    font-size:20px;
+    background:#0d435f;
+    cursor: pointer;
+}
+.tabs-today li.active{
+	background:#10b4d7;
+	color:#fff;
+}
+.wraprow {
+    /* display: -webkit-flex;
+    display: flex; */
+    width: 1872px;
+    margin: 0 auto;
+}
+.col01 {
+    position: relative;
+    float: left;
+    width: 1268px;
+    height: 976px;
+    margin-right: 52px;
+    overflow: hidden;
+}
+.col02 {
+    float: right;
+    width: 552px;
+    margin-top: 12px;
+}
+/* col02 */
+.col02 .row01{
+	height: 460px;
+}
+.col02 .row03 {
+   height:446px;
+}
+.box {
+    margin-bottom: 56px;
+}
+.lizt .cursor{
+	cursor:pointer;
+}
+.legend{
+    position: absolute;
+    left: 0;
+    top:116px;
+    width: 221px;
+    padding: 10px 15px;
+    z-index: 1
+}
+.legend .nyhlw{
+	font-size:16px;
+	margin-bottom:12px;
+}
+.legend li{
+    position: relative;
+    padding: 8px;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 2.6em;
+    background-position: 14px 7px;
+    cursor: default;
+}
+.legend li:hover{
+	cursor:pointer;
+}
+.ws,.dt,.cy,.gy{
+    position: absolute;
+    top:5px;
+    left:-2px;
+    display: inline-block;
+    width:21px;
+    height:20px;
+}
+.ws{
+    background: url("../images/nyst-ws.png") no-repeat;
+}
+.dt{
+    background: url("../images/nyst-dt.png") no-repeat;
+}
+.cy{
+    background: url("../images/nyst-cy.png") no-repeat;
+}
+.gy{
+    background: url("../images/nyst-gy.png") no-repeat;
+}
+#ny-bc{
+	position: absolute;
+    right: 98px;
+    bottom: 62px;
+    width: 221px;
+    padding: 10px 15px;
+    z-index: 1;
+    text-align:left;
+}
+#ny-bc li{
+	position: relative;
+    padding: 8px;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 2.6em;
+    background-position: 14px 7px;
+    cursor: default;
+}
+#ny-bc .ny-bc-com{
+	position: absolute;
+    top:10px;
+    left:12px;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50px;
+}
+#ny-bc .green{
+	background:#4dcb73;
+	box-shadow:0px 0px 20px #4dcb73;
+	
+}
+#ny-bc .purple{
+	background:#975fe4;
+	box-shadow:0px 0px 20px #975fe4;
+	
+}
+/*新增*/
+.box:last-child{
+    margin-bottom: 0;
+}
+.slider-top{
+    margin-top: 10px;
+}
+.col01 .box {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:550px;
+    height:230px;
+    z-index: 1;
+}
+.col02 .full {
+    height: 961px;
+}
+.chongqing{
+	width:495px;
+	/*height:84px;*/
+	height:90px;
+	border-top:1px solid #234285;
+	border-bottom:1px solid #234285;
+    /*margin: 126px 10px 0 20px;*/
+   margin: 120px 10px 0 20px;
+}
+.chq-top{
+	border-bottom:1px solid #182a5c;
+	line-height:44px;
+}
+.chq-top .chq-top-com{
+	color:#a6a7ac;
+}
+.chq-top .chq-top-com,.chq-bottom .chq-bottom-com{
+	display:inline-block;
+	text-align:center;
+	margin:0 20px;
+	font-size:14px;
+}
+.chq-bottom{
+	line-height:40px;
+}
+.pie-article{
+	position:relative;
+}
+.pie-article-right{
+	width: 352px;
+    position: absolute;
+    top: 6%;
+    margin-left: 26px;
+    left: 26%;
+    text-align: left;
+}
+.lsyj{
+	font-size:16px;
+	color:#fff;
+	margin-bottom:20px;
+}
+.yj{	
+  font-size: 14px;
+  color: rgba( 255, 255, 255, 0.502 );
+  line-height:24px;
+}
+.pie-box{
+	overflow:hidden;
+}
+.yjxs .yj-con,.yjdj .dj-con{
+	display:inline-block;
+	font-size:14px;
+	color:#fff;
+}
+.yjxs .yj-con{
+	margin:0 26px;
+}
+.yjdj .dj-con{
+	margin:0 38px;
+}
+.yjdj{
+	margin:12px 0 8px 0;
+}
+.yj-color{
+	display:inline-block;
+	width:8px;
+	height:8px;
+	margin-right:7px;
+}
+.red{
+	background:#f2637b;
+}
+.orange{
+	background:#fc7f32;
+}
+.yellow{
+	background:#bcbd2a;
+}
+.blue{
+	background:#224384;
+}
+.pie-con{
+	position:absolute;
+	bottom:15px;
+	left:32px;
+}
+.pie-yj{
+	display:inline-block;
+	font-size:14px;
+	margin:0 34px;
+}
+.yj-red{
+	color:#f2637b;
+}
+.yj-orange{
+	color:#fc7f32;
+}
+.yj-yellow{
+	color:#bcbd2a;
+}
+.yj-blue{
+	color:#224384;
+}
+/*专题地图*/
+.tab-con{
+	width: 100%;
+}
+.tab-con .tab-hide{
+	display:none;
+}
+.tab-con>div:first-child{
+    display: block;
+}
+#sq-map-legend .mouseover{	
+    color:#0d8aa7;
+	border-bottom:1px solid #0d8aa7;
+}
+
+.tabs-btn {
+    position:absolute;
+   	/*top:5px;
+   	right:4px;*/
+   	top: 26px;
+    right: 6px;
+    border:1px solid #0b4b63;
+}
+.tabs-btn li {
+	width:42px;
+	line-height:30px;
+    display: inline-block;
+    color: #888;
+    cursor: pointer;
+    padding: 0 5px;       
+}
+.tabs-btn .dst {
+    color: #fff;
+    background:#0b4b63;
+}
+.sq-map-legend{
+	position: absolute;
+    left:60px;
+    top:116px;
+    /*width: 140px;*/
+    width: 160px;
+    height:50px;
+    line-height:50px;
+    padding: 10px 15px;
+    z-index: 1;
+    text-align:left;
+    color:#a5a5a8;
+}
+.sq-map-legend .sq-bottom{
+	color:#0d8aa7;
+	border-bottom:1px solid #0d8aa7;
+	
+}
+/*.sq-map-legend #sq-line{
+	display:inline-block;
+	width:230px;
+	height:10px;
+	background:url(../images/nyst-sq-line.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:66px;
+	left:0;
+	box-sizing:border-box;
+}*/
+.sq-map-legend li{
+    position: relative;
+    padding: 8px;
+    font-size: 14px;
+    text-indent: 2.6em;
+    background-position: 14px 7px;
+    cursor:pointer;
+}
+.trsq,.hcyc,.jsl{
+    position: absolute;
+    top:18px;
+    left:0px;
+    display: inline-block;
+    width:30px;
+    height:30px;
+}
+.trsq{
+    background: url("../images/nyst-trsq.png") no-repeat;
+    background-size:100% 100%;
+}
+.hcyc{
+    background: url("../images/nyst-hcyc.png") no-repeat;
+    background-size:100% 100%;
+}
+.jsl{
+    background: url("../images/nyst-jsl.png") no-repeat;
+    background-size:100% 100%;
+}
+.sq-legend{
+	position: absolute;
+    right: 10%;
+    bottom:0;
+    /*width: 142px;*/
+   	width:160px;
+    height:164px;
+    z-index: 1;
+    border:1px solid #2d5bb0;
+    padding:30px 20px;
+    text-align: left;
+}
+.sq-legends{
+	position: absolute;
+    right: 10%;
+    bottom:0;
+   	width:180px;
+    height:164px;
+    z-index: 1;
+    border:1px solid #2d5bb0;
+    padding:30px 10px;
+    text-align: left;
+    line-height:44px;
+}
+.sq-legend li,.sq-legends li{
+    font-size: 14px;
+    cursor: default;
+  	color: rgba( 255, 255, 255, 0.502 );
+	line-height: 34px;
+    /*padding: 0 14px;*/
+   	padding:0;
+}
+.sq-legend  i.tr-color,.sq-legends  i.tr-color{
+	display:inline-block;
+	width:32px;
+	height:12px;
+	margin-right:10px;
+}
+#tr-ztMap,#hc-ztMap,#js-ztMap{
+	position: absolute;
+    text-align: left;
+    bottom:20px;
+    left:46px;
+}
+#tr-ztMap li.tr-range,#hc-ztMap li.tr-range,#js-ztMap li.tr-range{
+	display:block;
+	font-size:13px;
+	color:#89909c;
+	line-height:16px;
+	cursor:default;
+}
+#tr-ztMap .tr-color,#hc-ztMap .tr-color,#js-ztMap .tr-color{
+	display:inline-block;
+	width:32px;
+	height:12px;
+	margin-right:10px;
+}
+.color1{
+	background:#e7e600;
+}
+.color2{
+	background:#98e500;
+}
+.color3{
+	background:#98e500;
+}
+.color4{
+	background:#4c7300;
+}
+.color5{
+	background:#267300;
+}
+.color6{
+	background:#004ca9;
+}
+.hc-color1{
+	background:#38a700;
+}
+.hc-color2{
+	background:#5ebd01;
+}
+.hc-color3{
+	background:#8bd100;
+}
+.hc-color4{
+	background:#c1e801;
+}
+.hc-color5{
+	background:#ffff00;
+}
+.hc-color6{
+	background:#ffbe00;
+}
+.hc-color7{
+	background:#ff7f00;
+}
+.hc-color8{
+	background:#ff4001;
+}
+.hc-color9{
+	background:#fe0000;
+}
+.js-color1{
+	background:#ffff80;
+}
+.js-color2{
+	background:#b5f558;
+}
+.js-color3{
+	background:#71eb30;
+}
+.js-color4{
+	background:#3ad62d;
+}
+.js-color5{
+	background:#3db868;
+}
+.js-color6{
+	background:#2a9d9a;
+}
+.js-color7{
+	background:#216d9e;
+}
+.js-color8{
+	background:#1f3f8c;
+}
+.js-color9{
+	background:#0d1079;
+}
+.tr-hc-js{
+	/*width: 1268px;*/
+	height:1014px;	
+    margin-left: 30px;
+    margin-top: -18px;
+}
+#tr-trsq{
+    background:url(../images/nyst-tr3333.png) no-repeat;
+    background-size:100% 100%;
+    margin-left: 28.4px;    
+}
+#hc-trsq{
+	background:url(../images/nyst-hc4444.png) no-repeat;
+	background-size:100% 100%;
+}
+#js-trsq{
+	background:url(../images/nyst-js1111.png) no-repeat;
+	background-size:100% 100%;
+}
+.tr-com{
+	position: relative;
+	z-index:-1;
+}
+#tr-ztMap2{
+   	width:552px;
+	height:446px;
+    background: url(../images/nyst-tr2.png) no-repeat;
+    background-size: 100% 100%;    
+   	left: 7.45%;
+    top: -4.8%;
+}
+#tr-ztMap3{
+	width:552px;
+	height:446px;
+	background:url(../images/nyst-tr3.png) no-repeat;
+	background-size:100% 100%;
+    left: 12%;
+    top: -4%;
+}
+#tr-ztMap4{
+	width:552px;
+	height:446px;
+	background:url(../images/nyst-tr4.png) no-repeat;
+	background-size:100% 100%;
+   	left:12%;
+    top: -4%;
+}
+.hc-com{
+    position: relative;
+    left: 11%;
+    z-index: -1;
+}
+#hc-ztMap2{
+    width:552px;
+	height:446px;
+    background: url(../images/nyst-hc3.png) no-repeat;
+    background-size: 100% 100%;
+   	top:-4%;
+}
+#hc-ztMap3{
+	width:552px;
+	height:446px;
+	background:url(../images/nyst-hc4.png) no-repeat;
+	background-size:100% 100%;
+    top: -4%;
+}
+#hc-ztMap4{
+	width:552px;
+	height:446px;
+	background:url(../images/nyst-hc2.png) no-repeat;
+	background-size:100% 100%;
+    top: -4.8%;
+    left:10.5%;
+}
+.js-com{
+	position: relative;
+	z-index:-1;
+}
+#js-ztMap2{	
+	width:750px;
+	height:600px;
+    background: url(../images/nyst-js11.png) no-repeat;
+    background-size: 100% 100%;    
+    left:-6%;
+    top: -34%;
+}
+#js-ztMap3{
+	width:750px;
+	height:600px;
+	background:url(../images/nyst-js22.png) no-repeat;
+	background-size:100% 100%;
+    left: -6%;
+    top: -34%;
+}
+#js-ztMap4{
+	/*width:552px;*/
+	/*height:446px;*/
+	/*top: -10%;*/
+	width:750px;
+	height:600px;
+	background:url(../images/nyst-js33.png) no-repeat;
+	background-size:100% 100%;
+    /*left: 7%;*/  
+    left: -6%;
+    top: -34%;  
+
+}
+ /*质量安全页面地图页*/
+ul.nyst-maps{
+    overflow: hidden;
+}
+ul.nyst-maps li{
+    float: left;
+    width: 500px;
+    height: 530px;
+}
+.nyst-ect{
+    width: 940px;
+    height: 926px;
+    position: absolute;
+   	left: 23%;
+    top: 0%;
+}
+.greens{	
+	display:inline-block;
+	width:17px;
+	height:17px;
+	border-radius:50px;
+	background:#4dcb73;
+	box-shadow:0px 0px 20px #4dcb73;
+	position:absolute;
+	top: 38%;
+    left: 380%;
+}
+.green{	
+	display:inline-block;
+	width:17px;
+	height:17px;
+	border-radius:50px;
+	background:#4dcb73;
+	/*box-shadow:0px 0px 20px #4dcb73;*/
+	position:absolute;
+	top: 38%;
+    left: 380%;
+}
+.purple{
+	display:inline-block;
+	width:17px;
+	height:17px;
+	border-radius:50px;
+	background:#975fe4;
+	/*box-shadow:0px 0px 20px #975fe4;*/
+}
+.nyst-maps li >i{
+	display:inline-block;
+    position: absolute;
+    z-index: 10000;
+}
+.nyst-maps li >i.hz{
+    left: 54%;
+    top: 29%;
+}
+.nyst-maps li >i.nb{
+    left: 72%;
+    top: 38%;
+}
+.nyst-maps li >i.wz{
+    left: 58%;
+    top: 74%;
+}
+.nyst-maps li >i.tz{
+    left: 68%;
+    top: 52%;
+}
+.nyst-maps li >i.jh{
+    left: 54%;
+    top: 46%;
+}
+.nyst-maps li >i.sx{
+    left: 60%;
+    top: 35%;
+}
+.nyst-maps li >i.zs{
+    left: 80%;
+    top: 28%;
+}
+.nyst-maps li >i.ls{
+    left: 52%;
+    top: 65%;
+}
+.nyst-maps li >i.qz{
+    left: 40%;
+    top: 56%;
+}
+.nyst-maps li >i.huz{
+    left: 54%;
+    top: 18%;
+}
+.nyst-maps li >i.jx{
+    left: 62%;
+    top: 21%;
+}
+
+
+
+

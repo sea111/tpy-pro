@@ -1,0 +1,379 @@
+.wraprow {
+    /* display: -webkit-flex;
+    display: flex; */
+    width: 1872px;
+    margin: 0 auto;
+}
+.col01 {
+    position: relative;
+    float: left;
+    width: 1268px;
+    height: 964px;
+    margin-top: 12px;
+}
+.col02 {
+    float: right;
+    width: 552px;
+    margin-top: 12px;
+}
+/* col02 */
+.col02 .row01{
+	height: 962px;
+}
+.box {
+    margin-bottom: 56px;
+}
+.ncp-type{
+	float:left;	
+	/*padding:76px 120px 0 50px;*/
+	padding:76px 110px 0 80px;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+.ncp-type li.active{
+	color:#fff;
+	background:#1a3163;
+}
+.ncp-type .ncp-com{
+	width:176px;
+	line-height:46px;
+	border:1px solid #3569c9;
+	color:#3569c9;
+	font-size:14px;
+	text-align:center;
+	margin-bottom:36px;
+	border-radius:20px;
+	cursor:pointer;
+}
+.rzy-price{
+	float:left;
+	padding-top:46px;	
+}
+.rzy-price .rzy-nav{
+	margin-bottom:9px;
+}
+.rzy-nav .active{
+	background:#15204a;
+}
+.rzy-nav .rzy-nav-com{
+	display:inline-block;
+	border:1px solid #1f3772;
+	border-left:none;
+	border-right:none;
+	width:245px;
+	height:100px;
+	margin-right:29px;
+	text-align:left;
+	font-size:16px;
+	padding:28px 0 24px 28px;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+.rzy-nav .rzy-nav-com p:nth-child(1){
+	margin-bottom:20px;
+}
+.price-color{
+	color:#0e7f9d;
+}
+.up-arrow{
+	display:inline-block;
+	width:14px;
+	height:6px;
+	background:url(../images/ncpjg-uparrow.png) no-repeat;
+	background-size:100% 100%;
+	margin:0 10px;
+}
+.arrow-com{
+	display:inline-block;
+	width:8px;
+	height:12px;
+	margin-left:16px;
+}
+.up-red{
+	background:url(../images/ncpjg-red.png) no-repeat;
+	background-size:100% 100%;
+}
+.down-green{
+	background:url(../images/ncpjg-green.png) no-repeat;
+	background-size:100% 100%;
+}
+.nj-cz{
+	position:absolute;
+	/*top: 17%;*/
+	top:18.5%;
+    left:56%;
+}
+.nj-cz .njj-zcz{
+	color:#ffff00;
+	margin-right:54px;
+	font-size:12px;
+}
+.nj-cz .nj-cz-com{
+	display:inline-block;
+	width:12px;
+	height:7px;
+	background:#0d8aa7;
+	margin-right:12px;
+}
+.price-down .price-down-con{
+	text-align:left;
+	font-size:16px;
+	color:#0d8aa7;
+}
+.price-down .price-down-icon{
+	display:inline-block;
+	width:17px;
+	height:13px;
+	background:url(../images/ncpjg-skyblue.png) no-repeat;
+	background-size:100% 100%;
+	margin-right:12px;
+	margin-left:10px;
+}
+.sp-type{
+	float:left;
+}
+.sp-type-one{
+	/*margin-left:30px;*/
+	margin:0 164px 0 38px;
+}
+.sp-type-two{
+	/*margin-left:200px;*/
+	/*margin-left:180px;*/
+	/*margin-left:166px;*/
+}
+.sp-type .sp-type-com{
+	text-align:left;
+	font-size:14px;
+	color:#fff;
+	margin-bottom:18px;
+}
+.sp-type .sp-head{
+	color:#8f8f94;
+	margin:26px 0 20px 0;
+}
+.pjj-head{
+	margin:0 56px 0 76px;
+}
+.sp-type .sp-type-com .pjj{
+	color:#0fb4d6;
+	margin:0 90px;
+}
+.tabs-btn {
+    position:absolute;
+   	top: 38px;
+    right: 42px;
+    border:1px solid #0b4b63;
+    z-index:1;
+}
+.tabs-btn li {
+	width:42px;
+	line-height:30px;
+    display: inline-block;
+    color: #888;
+    cursor: pointer;
+    padding: 0 5px;       
+}
+.tabs-btn li.actives {
+    color: #fff;
+    background:#0b4b63;
+}
+select {
+    width:66px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    color:#fff;
+    background:url("../images/ncpjg-white.png") no-repeat scroll right center transparent;
+    outline:none;
+    border:none;
+    position:absolute;
+    top:36px;
+    cursor:pointer;
+}
+select::-ms-expand {
+    display:none;
+}
+option {
+    color:#333;
+    background-color:#eee;
+    font-size:12px;
+}
+.col02 select.dp-sc{
+	left:30px;
+}
+.col02 select.dp-xhs{
+	left:120px;
+}
+.dpjg-nav{
+	padding: 66px 14px 0 14px;
+    box-sizing: border-box;
+}
+.dpjg-nav .dpjg-nav-com{
+	display:inline-block;
+	border:1px solid #1f3772;
+	border-left:none;
+	border-right:none;
+	width:168px;
+	height:80px;
+	text-align:left;
+	font-size:14px;
+	padding:10px 0 24px 28px;
+	box-sizing:border-box;
+}
+.junj-com{
+	color:#91919a;
+}
+.dpjg-price{
+	margin:5px 0;
+}
+.dpjg-money{
+	font-size:24px;
+	color:#0d8aa7;
+}
+.dpjg-hb{
+	color:#91919a;
+}
+.jgqs li.active{
+	border:1px solid #0fb4d6;
+	color:#0fb4d6;
+}
+.jgqs .jgqs-com{
+	display:inline-block;
+	/*width:92px;*/
+	line-height:26px;
+	color:#b9b9bd;
+	text-align:center;
+	/*margin-right:20px;*/
+	font-size:14px;
+	cursor:pointer;
+    width: 108px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#zg-zd{
+	position: absolute;
+    right: -56px;
+    /*bottom: 354px;*/
+   	bottom: 256px;
+    width: 221px;
+    padding: 10px 15px;
+    z-index: 1;
+    text-align:left;
+}
+#zg-zd li{
+	position: relative;
+    padding: 8px;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 2.6em;
+    background-position: 14px 7px;
+    cursor: default;
+    color:#b9b9bb;
+}
+#zg-zd .zg-zd-com{
+	position: absolute;
+    top:10px;
+    left:12px;
+	display:inline-block;
+	width:24px;
+	height:12px;
+	border-radius:5px;
+}
+#zg-zd .yellow{
+	border:1px solid #ffff00;
+	box-shadow:0px 0px 10px #ffff00 inset;
+}
+#zg-zd .green{
+	border:1px solid #57c473;
+	box-shadow:0px 0px 10px #57c473 inset;
+}
+.jgqs{
+	position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+/*新增*/
+.box:last-child{
+    margin-bottom: 0;
+}
+.col01 .box {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:550px;
+    height:230px;
+    z-index: 1;
+}
+ /*质量安全页面地图页*/
+ul.ncpjg-maps{
+    overflow: hidden;
+}
+ul.ncpjg-maps li{
+    float: left;
+    width: 520;
+    height: 450;
+}
+.ncpjg-maps li >i{
+    position:absolute;
+    font-size:12px;
+    color: #fff;
+    z-index:10000;
+    border:1px solid #0fb4d6;
+    width:66px;
+	height:24px;
+	line-height:24px;
+	box-shadow:0px 0px 10px #0fb4d6 inset;
+	border-radius:6px;
+}
+.ncpjg-maps li >i.green{
+	border:1px solid #57c473;
+	box-shadow:0px 0px 10px #57c473 inset;
+}
+.ncpjg-maps li >i.yellow{
+	border:1px solid #ffff00;
+	box-shadow:0px 0px 10px #ffff00 inset;
+}
+.ncpjg-maps li >i.hz{
+   	left: 34%;
+    top: 37%;
+}
+.ncpjg-maps li >i.nb{
+    left: 65%;
+    top: 43%;
+}
+.ncpjg-maps li >i.wz{
+    left: 47%;
+    top: 64%;
+}
+.ncpjg-maps li >i.tz{
+    left: 58%;
+    top: 51%;
+}
+.ncpjg-maps li >i.jh{
+    left: 41%;
+    top: 46%;
+}
+.ncpjg-maps li >i.sx{
+    left: 51%;
+    top: 41%;
+}
+.ncpjg-maps li >i.zs{
+    left: 80%;
+    top: 35.4%;
+}
+.ncpjg-maps li >i.ls{
+    left: 32%;
+    top: 58.5%;
+}
+.ncpjg-maps li >i.qz{
+    left: 16%;
+    top: 53%;
+}
+.ncpjg-maps li >i.huz{
+    left: 36%;
+    top: 30%;
+}
+.ncpjg-maps li >i.jx{
+    left: 59%;
+    top: 26.8%;
+}

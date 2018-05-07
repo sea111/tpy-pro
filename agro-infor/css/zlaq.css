@@ -1,0 +1,319 @@
+.wrap {
+    display: -webkit-flex;
+    display: flex;
+    width: 1872px;
+    margin: 0 auto;
+}
+.col01,.col03 {
+    width: 585px;
+}
+.col01 {
+    margin-right: 40px;
+}
+.col02 {
+    position: relative;
+    width: 636px;
+    margin-right: 26px;
+}
+.col04 {
+    width: 523px;
+    height: 238px;   
+}
+.col05 {
+   width:523px;
+   height: 238px;   
+   margin-left:58px;
+   margin-right:58px;
+}
+.col06{
+	width:523px;
+	height: 238px;   
+}
+.box{
+    margin-top: 52px;
+    margin-bottom: 0;
+    padding: 0 30px;
+}
+/* col01 */
+
+.col01 > .box {
+   height: 627px;
+}
+.tabs-btn {
+    text-align: right;
+}
+.tabs-btn li {
+    width: 40px;
+    padding: 6px 12px 8px;
+    margin: 5px 5px;
+    border: solid 1px #05b8e8;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #05b8e8;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs-btn li:hover {
+    border: solid 1px #0d8aa7;
+    background-color: #0d8aa7;
+    color: #fff;
+}
+.tabs-btn li.active {
+    border: solid 1px #0d8aa7;
+    background-color: #0d8aa7;
+    color: #fff;
+    cursor: default;
+}
+.charts {
+    margin-top: 10px;
+}
+.charts .top-bottom {
+    display: inline-block;
+    width: 150px;
+    height: 100px;   
+    margin-right: 20px;
+}
+.charts .charts-bottom{
+	margin-top:-40px;
+}
+/* col02 */
+.col02 .tabs-btn {
+    margin-top: 56px;
+    z-index:2;
+    position:inherit;
+}
+.legend {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    width: 103px;
+    height: 158px;
+    border: dashed 1px #0a658d;
+    background-color: #18134d;
+}
+/* col03 */
+.col03 > .box {
+    margin-top: 67px;
+}
+.col03 > .box:nth-child(1) {
+    height: 272px;
+}
+.col03 > .box:nth-child(2) {
+    height: 272px;
+}
+.col03 .box .total-kzsm{
+	margin-top: -14px;
+    margin-bottom: 14px;
+}
+.box .total {
+    text-align: left;
+    margin-left: 16px;
+}
+.box .total i.kzs-circle{
+	display:inline-block;
+	width:13px;
+	height:13px;
+	border-radius:50px;
+}
+.box .total i.zszt-color{
+	border:1px solid #18a3fc;
+	box-shadow:0 0 14px #18a3fc inset;
+}
+.box .total i.zsm-color{
+	border:1px solid #4dbdeb;
+	box-shadow:0 0 14px #4dbdeb inset;
+}
+.box .total i.kzs-tit{
+    font-size: 16px;
+    color: #fff000;
+}
+.box .total span {
+    display: inline-block;
+    width: 125px;
+    height: 28px;
+    margin: 0 4px 28px 8px;
+    background: url("../images/data_bg02.png");
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.68em;
+    text-indent: 3px;
+}
+/* col04 */
+.table {
+}
+.table th,.table td {
+    padding:7px;
+}
+.table th {
+    padding-top: 0;
+}
+.table td {
+    font-size: 12px;
+    color: #888;
+}
+.table tbody td:first-child span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #05b8e8;
+    font-size: 12px;
+    color: #fff;
+}
+/* col05 */
+.company-type {
+    position: relative;
+    left: -24px;
+    text-align: left;
+    margin-top: 50px;
+}
+.company-type li {
+    display: inline-block;
+    width: 130px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    border-right: solid 1px #3569c9;
+}
+.company-type li:last-child {
+    border-right: none;
+}
+.company-type li span{
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.map-icon-com{
+	display:inline-block;
+	width:25px;
+	height:20px;
+	position:absolute;
+	right:7%;   
+	z-index:1;
+	cursor:pointer;
+}
+.icon-blue{
+	top:6%;
+	background:url(../images/zlaq-blue-map.png) no-repeat;
+	background-size:100% 100%;
+}
+.icon-yellow{
+	top:11%;
+	background:url(../images/zlaq-yellow-map.png) no-repeat;
+	background-size:100% 100%;
+}
+.kzszt{
+	top:15%;
+}
+.kzsm{
+	top:34%;
+}
+.total span.zsm-num{
+	margin-left:25px;
+}
+.zszt-zsm{
+	position:absolute;
+	font-size:14px;
+	color:#d2d2d3;
+	margin-left:5px;
+	padding-left:22px;
+}
+.zszt-up{	
+	top:18%;	
+}
+.zsm-down{
+	top:34%;
+}
+.arrow-com{
+	display:inline-block;
+	width:8px;
+	height:12px;
+	margin-left:10px;
+}
+.up-red{
+	background:url(../images/ncpjg-red.png) no-repeat;
+	background-size:100% 100%;
+}
+.down-green{
+	background:url(../images/ncpjg-green.png) no-repeat;
+	background-size:100% 100%;
+}
+  /*质量安全页面地图页*/
+/*#zlaq-title{
+	position:absolute;
+	top:2%;
+	left:5%;
+	
+}*/
+ul.zlaq-maps{
+    overflow: hidden;
+}
+ul.zlaq-maps li{
+    float: left;
+    width: 500px;
+    height: 530px;
+}
+.ect2{
+    width: 115%;
+    height: 115%;
+    position: absolute;
+    left: -56px;
+    top: 5px;
+    /*z-index:-1;*/
+}
+.zlaq-maps li >span{
+    position: absolute;
+    font-size: 12px;
+    color: #e9da80;
+    line-height: 3.333;
+    z-index: 10000;
+}
+.zlaq-maps li >span.hz{
+    left: 302px;
+    top: 188px;
+}
+.zlaq-maps li >span.nb{
+    left: 456px;
+    top: 246px;
+}
+.zlaq-maps li >span.wz{
+    left: 361px;
+    top: 533px;
+}
+.zlaq-maps li >span.tz{
+    left: 443px;
+    top: 430px;
+}
+.zlaq-maps li >span.jh{
+    left: 239px;
+    top: 370px;
+}
+.zlaq-maps li >span.sx{
+    left: 348px;
+    top: 224px;
+}
+.zlaq-maps li >span.zs{
+    left: 534px;
+    top: 232px;
+}
+.zlaq-maps li >span.ls{
+    left: 272px;
+    top: 459px;
+}
+.zlaq-maps li >span.qz{
+    left: 150px;
+    top: 391px;
+}
+.zlaq-maps li >span.huz{
+    left: 290px;
+    top: 92px;
+}
+.zlaq-maps li >span.jx{
+    left: 367px;
+    top: 116px;
+}
+

@@ -1,0 +1,345 @@
+.wraprow {
+    display: -webkit-flex;
+    display: flex;
+    width: 1872px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+.col01,.col03,.col04,.col06 {
+    width: 618px;
+}
+.col01,.col02,.col04,.col05 {
+    margin-right: 16px;
+}
+.col02,.col05 {
+    width: 598px;
+}
+.col04,.col05,.col06{
+	height: 186px;
+	margin-top: 70px;
+}
+.col01 .box,.col03 .box {
+    height: 298px;
+    margin-top: 40px;
+}
+.col01 .box:nth-child(2),.col03 .box:nth-child(2) {
+    margin-top: 66px;
+}
+.box {
+    margin-bottom: 0;
+}
+.table {
+    margin: 16px auto 0;
+}
+.table th,.table td {
+    padding: 8px;
+}
+.table th {
+    padding-top: 0;
+}
+.table td {
+    font-size: 12px;
+    color: #888;
+}
+.table tbody td:first-child span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #05b8e8;
+    font-size: 12px;
+    color: #fff;
+}
+/* col02 */
+#tabsMap > ul {
+    height: 20px;
+    padding: 15px 0 5px;
+    border-bottom: solid 1px #1f3f7c;
+    background-color: #0b0c25;
+}
+#tabsMap > ul li{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 20px;
+    color: #fff;
+    cursor:pointer;
+}
+.actives{
+	display: inline-block;
+    text-align: center;
+    border-bottom: solid 1px #04aeff;
+}
+#tabsMap ul li a{
+    display: block;
+    color: #fff;
+}
+#tabsMap .tabsSeletedLi {
+    display: inline-block;
+    text-align: center;
+    border-bottom: solid 1px #04aeff;
+}
+#tabsMap .tabsSeletedLi a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight:bold;
+    color: #fff;
+}
+#tabsMap .tabsSeletedLi a:hover {
+    color: #fff;
+    cursor: default;
+}
+#tabsMap .tabsUnSeletedLi {
+    display: inline-block;
+    text-align: center;
+}
+#tabsMap .tabsUnSeletedLi a {
+    text-decoration: none;
+    font-weight:bold;
+}
+#tabsMap > div {
+    text-align: left;
+}
+#tabsMap > div ul {
+    background-color: #0b0c25;
+    overflow: hidden;
+}
+#tabsMap > div li {
+    display: inline-block;
+    width: 106px;
+    padding: 10px 20px;
+    margin: 10px 0 0;
+    text-align: left;
+    color: #888;
+    cursor: pointer;
+}
+/*#tabsMap > div li:hover {
+    background-color: #141638;
+}*/
+#tabsMap > div li span {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #fff;
+}
+.map {
+    margin-top: 22px;
+}
+#tabsBtn01 li:hover,#tabsBtn02 li:hover,#tabsBtn03 li:hover,#tabsBtn04 li:hover{
+    background-color: #141638;
+}
+/* col03 */
+.col03 .t1 {
+    color: #975fe4;
+}
+.col03 .t2 {
+    color: #87cef9;
+}
+.col03 .t3 {
+    color: #f17f50;
+}
+.col03 .t4 {
+    color: #6495ed;
+}
+.col03 .t5 {
+    color: #32cd32;
+}
+.col03 .t6 {
+    color: #f6d442;
+}
+.col03 .t7 {
+    color: #ff4341;
+}
+.col03 .t8 {
+    color: #3fe0eb;
+}
+.titles {
+    position: relative;
+    top: -18px;
+}
+.titles li {
+    display: inline-block;
+    padding: 10px 24px 12px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.col03 .tabsDiv div li{
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    margin: 20px 0;
+    border-right: solid 1px #254489;
+    color: #888;
+}
+.col03 .tabsDiv .sp-buttons {
+    position: relative;
+    top: -30px;
+}
+.col03 .tabsDiv div i {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.col03 .tabsDiv div li:nth-child(4),.col03 .tabsDiv div li:nth-child(8) {
+    border-right: none;
+}
+.col03 .tabsSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title_bg.png");
+}
+.col03 .tabsSeletedLi a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight:bold;
+    color: #fff;
+}
+.col03 .tabsSeletedLi a:hover {
+    color: #fff;
+    cursor: default;
+}
+.col03 .tabsUnSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title2_bg.png");
+    color: #888;
+}
+.col03 .tabsUnSeletedLi a {
+    color: #888;
+    text-decoration: none;
+    font-weight:bold;
+}
+.col03 .tabsUnSeletedLi a:hover {
+    color: #fff;
+}
+/* col04 */
+.col04 .tabsSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title_bg.png");
+}
+.col04 .tabsSeletedLi a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight:bold;
+    color: #fff;
+}
+.col04 .tabsSeletedLi a:hover {
+    color: #fff;
+    cursor: default;
+}
+.col04 .tabsUnSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title2_bg.png");
+}
+.col04 .tabsUnSeletedLi a {
+    color: #888;
+    text-decoration: none;
+    font-weight:bold;
+}
+.col04 .tabsUnSeletedLi a:hover {
+    color: #fff;
+}
+/* col05 */
+.col05 .tabsSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title_bg.png");
+}
+.col05 .tabsSeletedLi a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight:bold;
+    color: #fff;
+}
+.col05 .tabsSeletedLi a:hover {
+    color: #fff;
+    cursor: default;
+}
+.col05 .tabsUnSeletedLi {
+    display: inline-block;
+    text-align: center;
+    background: url("../images/title2_bg.png");
+}
+.col05 .tabsUnSeletedLi a {
+    color: #888;
+    text-decoration: none;
+    font-weight:bold;
+}
+.col05 .tabsUnSeletedLi a:hover {
+    color: #fff;
+}
+
+/*质量安全页面地图页*/
+ul.zhnj-maps{
+    overflow: hidden;
+}
+ul.zhnj-maps li{
+    float: left;
+    width: 500px;
+    /*height: 530px;*/
+   	height:460px;
+}
+.zhnj-ect{
+    /*width: 115%;
+    height: 112%;*
+    position: absolute;
+    left: -56px;
+    top: 5px;*/
+  	width: 578px;
+    height: 520px;
+    position: absolute;
+    top: 258px;
+}
+.zhnj-maps li >span{
+    position: absolute;
+    font-size: 12px;
+    color: #e9da80;
+    line-height: 3.333;
+    z-index: 10000;
+}
+.zhnj-maps li >span.hz{
+   	left: 46%;
+    top: 37%;
+}
+.zhnj-maps li >span.nb{
+   	left: 54%;
+    top: 41%;
+}
+.zhnj-maps li >span.wz{
+    left: 49%;
+    top: 58%;
+}
+.zhnj-maps li >span.tz{
+   	left: 52%;
+    top: 46%;
+}
+.zhnj-maps li >span.jh{
+   	left: 48%;
+    top: 43%;
+}
+.zhnj-maps li >span.sx{
+   	left: 50%;
+    top: 39%;
+}
+.zhnj-maps li >span.zs{
+    left: 58%;
+    top: 34%;
+}
+.zhnj-maps li >span.ls{
+   	left: 46%;
+    top: 54%;
+}
+.zhnj-maps li >span.qz{
+   	left: 41%;
+    top: 46%;
+}
+.zhnj-maps li >span.huz{
+   	left: 46%;
+    top: 30%;
+}
+.zhnj-maps li >span.jx{
+    left: 53%;
+    top: 27%;
+}

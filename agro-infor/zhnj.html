@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>浙江省智慧农业云平台</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/slider-pro.min.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/zhnj.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/echarts.css" />
+	<style>
+	.table-heads{
+		overflow: hidden;
+		margin-bottom: 20px;
+		margin-top: 14px;
+	}
+	.table-heads span{
+		width:100px;
+		margin: 0 21px;
+	}
+	.scrollBox{
+		height: 83px;
+		width: 522px;
+		overflow: hidden;
+		margin: 0px 56px;
+	}
+	.scrollBox .con1,.con2{
+	    width: 529px;
+		float: left;
+		margin-left: -35px;
+		padding-bottom: 0px;
+	}
+    .scrollBox li{
+	    height: 34px;
+		line-height: 18px;
+	}
+	.scrollBox li span{
+		display: inline-block;
+	    margin: 0 -5px;
+	    height: 18px;
+	    color: #888;
+	    width: 110px;
+	    text-align:center;
+	}
+	</style>
+</head>
+<body>
+    <div class="header">
+        <h1><img src="images/logo.png" width="420" height="43" /></h1>
+    </div>
+    <span class="menu"></span>
+    <ul id="menuItems" class="menu-items" style="display:none">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ncjy.html">农村经营</a></li>
+        <li><a href="nyst.html">农业生态</a></li>
+        <li><a href="zlaq.html">质量安全</a></li>
+        <li><a href="ncpjg.html">农产品价格</a></li>
+        <li><a href="xmjg.html">畜牧监管</a></li>
+        <li class="active">智慧农机</li>
+        <i class="left-top"></i>
+        <i class="right-top"></i>
+        <i class="right-bottom"></i>
+        <i class="left-bottom"></i>
+    </ul>
+    <div class="wraprow">
+        <div class="col01">
+            <div class="box">
+                <div class="title"><h2>全省驾驶证数据统计</h2></div>
+                <div class="chart" style="width:580px;height:230px;margin:0 auto;">
+                    <!--放图表-->
+                     <div id="zhnjBar1" style="width:600px;height:258px;"></div> 
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+            <div class="box">
+                <div class="title"><h2>全省拖拉机数据统计</h2></div>
+                <div class="chart" style="width:580px;height:230px;margin:0 auto;">
+                     <div id="zhnjBar2" style="width:600px;height:258px;"></div> 
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+        </div>
+        <div class="col02" style="overflow:hidden;">
+            <div id="tabsMap" >
+                <ul class="tabsUl">
+                    <li class="actives" id="gjbtT"><a>购机补贴</a></li>
+                    <li id='njjgT'><a>农机监管</a></li>
+                    <li id="fzspT"><a>发展水平</a></li>
+                    <li id="fwztT"><a>服务主体</a></li>
+                </ul>
+                <div id="tabs1">
+                    <ul id="tabsBtn01">
+                        <li>农机总动力<br /><span>124543</span>万千瓦</li>
+                        <li>柴油机<br /><span>124543</span>万台</li>
+                        <li>汽油机<br /><span>124543</span>万台</li>
+                        <li>电动机<br /><span>124543</span>万台</li>
+                        <li>农机总动力<br /><span>124543</span>辆</li>
+                        <li>农机总动力<br /><span>124543</span>辆</li>
+                        <li>农机总动力<br /><span>124543</span>辆</li>
+                        <li>农机总动力<br /><span>124543</span>辆</li>
+                    </ul>
+                    <div id="wrap01" class="map">
+        	            <div id="gjbt">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3211</span>
+                                    <span class="nb">3211</span>
+                                    <span class="wz">3211</span>
+                                    <span class="tz">3211</span>
+                                    <span class="ls">3211</span>
+                                    <span class="qz">3211</span>
+                                    <span class="zs">3211</span>
+                                    <span class="huz">3211</span>
+                                    <span class="jx">3211</span>
+                                    <span class="sx">3211</span>
+                                    <span class="jh">3211</span>
+                                    <div class="zhnj-ect" id="zhnjmap1"></div>
+                                </li>
+                            </ul>
+        	            </div>
+        	            <div id="gjbt2" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3222</span>
+                                    <span class="nb">3222</span>
+                                    <span class="wz">3222</span>
+                                    <span class="tz">3222</span>
+                                    <span class="ls">3222</span>
+                                    <span class="qz">3222</span>
+                                    <span class="zs">3222</span>
+                                    <span class="huz">3222</span>
+                                    <span class="jx">3222</span>
+                                    <span class="sx">3222</span>
+                                    <span class="jh">3222</span>
+                                    <div class="zhnj-ect" id="zhnjmap2"></div>
+                                </li>
+                            </ul>
+        	            </div>
+        	            <div id="gjbt3" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3233</span>
+                                    <span class="nb">3233</span>
+                                    <span class="wz">3233</span>
+                                    <span class="tz">3233</span>
+                                    <span class="ls">3233</span>
+                                    <span class="qz">3233</span>
+                                    <span class="zs">3233</span>
+                                    <span class="huz">3233</span>
+                                    <span class="jx">3233</span>
+                                    <span class="sx">3233</span>
+                                    <span class="jh">3233</span>
+                                    <div class="zhnj-ect" id="zhnjmap3"></div>
+                                </li>
+                            </ul>
+        	            </div>
+                        <div  id="gjbt4" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3244</span>
+                                    <span class="nb">3244</span>
+                                    <span class="wz">3244</span>
+                                    <span class="tz">3244</span>
+                                    <span class="ls">3244</span>
+                                    <span class="qz">3244</span>
+                                    <span class="zs">3244</span>
+                                    <span class="huz">3244</span>
+                                    <span class="jx">3244</span>
+                                    <span class="sx">3244</span>
+                                    <span class="jh">3244</span>
+                                    <div class="zhnj-ect" id="zhnjmap4"></div>
+                                </li>
+                            </ul>
+        	            </div>
+                        <div id="gjbt5" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3255</span>
+                                    <span class="nb">3255</span>
+                                    <span class="wz">3255</span>
+                                    <span class="tz">3255</span>
+                                    <span class="ls">3255</span>
+                                    <span class="qz">3255</span>
+                                    <span class="zs">3255</span>
+                                    <span class="huz">3255</span>
+                                    <span class="jx">3255</span>
+                                    <span class="sx">3255</span>
+                                    <span class="jh">3255</span>
+                                    <div class="zhnj-ect" id="zhnjmap5"></div>
+                                </li>
+                            </ul>
+        	            </div>
+                        <div id="gjbt6" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3266</span>
+                                    <span class="nb">3266</span>
+                                    <span class="wz">3266</span>
+                                    <span class="tz">3266</span>
+                                    <span class="ls">3266</span>
+                                    <span class="qz">3266</span>
+                                    <span class="zs">3266</span>
+                                    <span class="huz">3266</span>
+                                    <span class="jx">3266</span>
+                                    <span class="sx">3266</span>
+                                    <span class="jh">3266</span>
+                                    <div class="zhnj-ect" id="zhnjmap6"></div>
+                                </li>
+                            </ul>
+        	            </div>
+                        <div id="gjbt7" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3277</span>
+                                    <span class="nb">3277</span>
+                                    <span class="wz">3277</span>
+                                    <span class="tz">3277</span>
+                                    <span class="ls">3277</span>
+                                    <span class="qz">3277</span>
+                                    <span class="zs">3277</span>
+                                    <span class="huz">3277</span>
+                                    <span class="jx">3277</span>
+                                    <span class="sx">3277</span>
+                                    <span class="jh">3277</span>
+                                    <div class="zhnj-ect" id="zhnjmap7"></div>
+                                </li>
+                            </ul>
+        	            </div>
+                        <div id="gjbt8" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3288</span>
+                                    <span class="nb">3288</span>
+                                    <span class="wz">3288</span>
+                                    <span class="tz">3288</span>
+                                    <span class="ls">3288</span>
+                                    <span class="qz">3288</span>
+                                    <span class="zs">3288</span>
+                                    <span class="huz">3288</span>
+                                    <span class="jx">3288</span>
+                                    <span class="sx">3288</span>
+                                    <span class="jh">3288</span>
+                                    <div class="zhnj-ect" id="zhnjmap8"></div>
+                                </li>
+                            </ul>
+        	            </div>
+            		</div>
+                </div>
+                <div id="tabs2" style="display:none;">
+                    <ul id="tabsBtn02">
+                        <li>拖拉机办证受理<br /><span>124543</span>万千瓦</li>
+                        <li>驾驶证统计<br /><span>124543</span>万台</li>
+                        <li>驾驶证办证受理<br /><span>124543</span>万台</li>
+                        <br />
+                        <li style="width:86px;">拖拉机数<br /><span>124543</span>辆</li>
+                        <li style="width:126px;">小型方向盘式拖拉机<br /><span>124543</span>辆</li>
+                        <li>手扶式拖拉机<br /><span>124543</span>辆</li>
+                        <li>大中型拖拉机<br /><span>124543</span>辆</li>
+                    </ul>
+                    <div id="wrap02" class="map">
+                        <div id="njjg">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3211</span>
+                                    <span class="nb">3211</span>
+                                    <span class="wz">3211</span>
+                                    <span class="tz">3211</span>
+                                    <span class="ls">3211</span>
+                                    <span class="qz">3211</span>
+                                    <span class="zs">3211</span>
+                                    <span class="huz">3211</span>
+                                    <span class="jx">3211</span>
+                                    <span class="sx">3211</span>
+                                    <span class="jh">3211</span>
+                                    <div class="zhnj-ect" id="zhnjmap9"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg2" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3222</span>
+                                    <span class="nb">3222</span>
+                                    <span class="wz">3222</span>
+                                    <span class="tz">3222</span>
+                                    <span class="ls">3222</span>
+                                    <span class="qz">3222</span>
+                                    <span class="zs">3222</span>
+                                    <span class="huz">3222</span>
+                                    <span class="jx">3222</span>
+                                    <span class="sx">3222</span>
+                                    <span class="jh">3222</span>
+                                    <div class="zhnj-ect" id="zhnjmap10"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg3" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3233</span>
+                                    <span class="nb">3233</span>
+                                    <span class="wz">3233</span>
+                                    <span class="tz">3233</span>
+                                    <span class="ls">3233</span>
+                                    <span class="qz">3233</span>
+                                    <span class="zs">3233</span>
+                                    <span class="huz">3233</span>
+                                    <span class="jx">3233</span>
+                                    <span class="sx">3233</span>
+                                    <span class="jh">3233</span>
+                                    <div class="zhnj-ect" id="zhnjmap11"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg4" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3244</span>
+                                    <span class="nb">3244</span>
+                                    <span class="wz">3244</span>
+                                    <span class="tz">3244</span>
+                                    <span class="ls">3244</span>
+                                    <span class="qz">3244</span>
+                                    <span class="zs">3244</span>
+                                    <span class="huz">3244</span>
+                                    <span class="jx">3244</span>
+                                    <span class="sx">3244</span>
+                                    <span class="jh">3244</span>
+                                    <div class="zhnj-ect" id="zhnjmap12"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg5" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3255</span>
+                                    <span class="nb">3255</span>
+                                    <span class="wz">3255</span>
+                                    <span class="tz">3255</span>
+                                    <span class="ls">3255</span>
+                                    <span class="qz">3255</span>
+                                    <span class="zs">3255</span>
+                                    <span class="huz">3255</span>
+                                    <span class="jx">3255</span>
+                                    <span class="sx">3255</span>
+                                    <span class="jh">3255</span>
+                                    <div class="zhnj-ect" id="zhnjmap13"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg6" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3266</span>
+                                    <span class="nb">3266</span>
+                                    <span class="wz">3266</span>
+                                    <span class="tz">3266</span>
+                                    <span class="ls">3266</span>
+                                    <span class="qz">3266</span>
+                                    <span class="zs">3266</span>
+                                    <span class="huz">3266</span>
+                                    <span class="jx">3266</span>
+                                    <span class="sx">3266</span>
+                                    <span class="jh">3266</span>
+                                    <div class="zhnj-ect" id="zhnjmap14"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg7" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3277</span>
+                                    <span class="nb">3277</span>
+                                    <span class="wz">3277</span>
+                                    <span class="tz">3277</span>
+                                    <span class="ls">3277</span>
+                                    <span class="qz">3277</span>
+                                    <span class="zs">3277</span>
+                                    <span class="huz">3277</span>
+                                    <span class="jx">3277</span>
+                                    <span class="sx">3277</span>
+                                    <span class="jh">3277</span>
+                                    <div class="zhnj-ect" id="zhnjmap15"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="njjg8" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3288</span>
+                                    <span class="nb">3288</span>
+                                    <span class="wz">3288</span>
+                                    <span class="tz">3288</span>
+                                    <span class="ls">3288</span>
+                                    <span class="qz">3288</span>
+                                    <span class="zs">3288</span>
+                                    <span class="huz">3288</span>
+                                    <span class="jx">3288</span>
+                                    <span class="sx">3288</span>
+                                    <span class="jh">3288</span>
+                                    <div class="zhnj-ect" id="zhnjmap16"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs3" style="display:none;">
+                    <ul id="tabsBtn03">
+                        <li>农机总动力<br /><span>124543</span>万千瓦</li>
+                        <li>柴油机<br /><span>124543</span>万台</li>
+                        <li>汽油机<br /><span>124543</span>万台</li>
+                        <li>电动机<br /><span>124543</span>万台</li>
+                        <li>农机总投入<br /><span>124543</span>辆</li>
+                        <li>财政投入<br /><span>124543</span>辆</li>
+                        <li>中央财政投入<br /><span>124543</span>辆</li>
+                        <li>地方财政投入<br /><span>124543</span>辆</li>
+                    </ul>
+                    <div id="wrap03" class="map">
+                        <div id="fzsp">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3211</span>
+                                    <span class="nb">3211</span>
+                                    <span class="wz">3211</span>
+                                    <span class="tz">3211</span>
+                                    <span class="ls">3211</span>
+                                    <span class="qz">3211</span>
+                                    <span class="zs">3211</span>
+                                    <span class="huz">3211</span>
+                                    <span class="jx">3211</span>
+                                    <span class="sx">3211</span>
+                                    <span class="jh">3211</span>
+                                    <div class="zhnj-ect" id="zhnjmap17"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp2" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3222</span>
+                                    <span class="nb">3222</span>
+                                    <span class="wz">3222</span>
+                                    <span class="tz">3222</span>
+                                    <span class="ls">3222</span>
+                                    <span class="qz">3222</span>
+                                    <span class="zs">3222</span>
+                                    <span class="huz">3222</span>
+                                    <span class="jx">3222</span>
+                                    <span class="sx">3222</span>
+                                    <span class="jh">3222</span>
+                                    <div class="zhnj-ect" id="zhnjmap18"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp3" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3233</span>
+                                    <span class="nb">3233</span>
+                                    <span class="wz">3233</span>
+                                    <span class="tz">3233</span>
+                                    <span class="ls">3233</span>
+                                    <span class="qz">3233</span>
+                                    <span class="zs">3233</span>
+                                    <span class="huz">3233</span>
+                                    <span class="jx">3233</span>
+                                    <span class="sx">3233</span>
+                                    <span class="jh">3233</span>
+                                    <div class="zhnj-ect" id="zhnjmap19"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp4" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3244</span>
+                                    <span class="nb">3244</span>
+                                    <span class="wz">3244</span>
+                                    <span class="tz">3244</span>
+                                    <span class="ls">3244</span>
+                                    <span class="qz">3244</span>
+                                    <span class="zs">3244</span>
+                                    <span class="huz">3244</span>
+                                    <span class="jx">3244</span>
+                                    <span class="sx">3244</span>
+                                    <span class="jh">3244</span>
+                                    <div class="zhnj-ect" id="zhnjmap20"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp5" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3255</span>
+                                    <span class="nb">3255</span>
+                                    <span class="wz">3255</span>
+                                    <span class="tz">3255</span>
+                                    <span class="ls">3255</span>
+                                    <span class="qz">3255</span>
+                                    <span class="zs">3255</span>
+                                    <span class="huz">3255</span>
+                                    <span class="jx">3255</span>
+                                    <span class="sx">3255</span>
+                                    <span class="jh">3255</span>
+                                    <div class="zhnj-ect" id="zhnjmap21"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp6" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3266</span>
+                                    <span class="nb">3266</span>
+                                    <span class="wz">3266</span>
+                                    <span class="tz">3266</span>
+                                    <span class="ls">3266</span>
+                                    <span class="qz">3266</span>
+                                    <span class="zs">3266</span>
+                                    <span class="huz">3266</span>
+                                    <span class="jx">3266</span>
+                                    <span class="sx">3266</span>
+                                    <span class="jh">3266</span>
+                                    <div class="zhnj-ect" id="zhnjmap22"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp7" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3277</span>
+                                    <span class="nb">3277</span>
+                                    <span class="wz">3277</span>
+                                    <span class="tz">3277</span>
+                                    <span class="ls">3277</span>
+                                    <span class="qz">3277</span>
+                                    <span class="zs">3277</span>
+                                    <span class="huz">3277</span>
+                                    <span class="jx">3277</span>
+                                    <span class="sx">3277</span>
+                                    <span class="jh">3277</span>
+                                    <div class="zhnj-ect" id="zhnjmap23"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fzsp8" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3288</span>
+                                    <span class="nb">3288</span>
+                                    <span class="wz">3288</span>
+                                    <span class="tz">3288</span>
+                                    <span class="ls">3288</span>
+                                    <span class="qz">3288</span>
+                                    <span class="zs">3288</span>
+                                    <span class="huz">3288</span>
+                                    <span class="jx">3288</span>
+                                    <span class="sx">3288</span>
+                                    <span class="jh">3288</span>
+                                    <div class="zhnj-ect" id="zhnjmap24"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs4" style="display:none;">
+                    <ul id="tabsBtn04" style="margin:0 auto;">
+	                    <li style="margin-left:144px;">农机专业合作社<br /><span>124</span></li>
+	                    <li>农机生产企业<br /><span>315</span></li>	                              	
+	                	<li style="margin-left:144px;">农机培训机构<br /><span>124</span></li>
+	                	<li>农机维修服务站<br /><span>124</span></li>                        
+                    </ul>
+                    <div id="wrap04" class="map">
+                        <div id="fwzt">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3211</span>
+                                    <span class="nb">3211</span>
+                                    <span class="wz">3211</span>
+                                    <span class="tz">3211</span>
+                                    <span class="ls">3211</span>
+                                    <span class="qz">3211</span>
+                                    <span class="zs">3211</span>
+                                    <span class="huz">3211</span>
+                                    <span class="jx">3211</span>
+                                    <span class="sx">3211</span>
+                                    <span class="jh">3211</span>
+                                    <div class="zhnj-ect" id="zhnjmap25"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fwzt2" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3222</span>
+                                    <span class="nb">3222</span>
+                                    <span class="wz">3222</span>
+                                    <span class="tz">3222</span>
+                                    <span class="ls">3222</span>
+                                    <span class="qz">3222</span>
+                                    <span class="zs">3222</span>
+                                    <span class="huz">3222</span>
+                                    <span class="jx">3222</span>
+                                    <span class="sx">3222</span>
+                                    <span class="jh">3222</span>
+                                    <div class="zhnj-ect" id="zhnjmap26"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fwzt3" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3233</span>
+                                    <span class="nb">3233</span>
+                                    <span class="wz">3233</span>
+                                    <span class="tz">3233</span>
+                                    <span class="ls">3233</span>
+                                    <span class="qz">3233</span>
+                                    <span class="zs">3233</span>
+                                    <span class="huz">3233</span>
+                                    <span class="jx">3233</span>
+                                    <span class="sx">3233</span>
+                                    <span class="jh">3233</span>
+                                    <div class="zhnj-ect" id="zhnjmap27"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="fwzt4" style="display:none;">
+                            <ul class="zhnj-maps">
+                                <li>
+                                    <span class="hz">3244</span>
+                                    <span class="nb">3244</span>
+                                    <span class="wz">3244</span>
+                                    <span class="tz">3244</span>
+                                    <span class="ls">3244</span>
+                                    <span class="qz">3244</span>
+                                    <span class="zs">3244</span>
+                                    <span class="huz">3244</span>
+                                    <span class="jx">3244</span>
+                                    <span class="sx">3244</span>
+                                    <span class="jh">3244</span>
+                                    <div class="zhnj-ect" id="zhnjmap28"></div>
+                                </li>
+                            </ul>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col03">
+            <div class="box">
+                <div class="title"><h2>全省农机总投入情况</h2></div>
+                <div class="chart" style="width:580px;height:230px;margin:0 auto;">
+                    <!--放图表-->
+                    <div id="zhnjBar3" style="width:600px;height:258px;"></div>
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+            <div id="tabsJx" class="box">
+                <ul class="titles">
+                    <li><a href="#tabs11"><h2>主要机械情况</h2></a></li>
+                    <li><a href="#tabs22"><h2>农业作业情况</h2></a></li>
+                </ul>
+                <div id="tabs11">
+                    <div id="sliderJx1" class="slider-pro">
+                        <div class="sp-slides">
+                            <div class="sp-slide">
+                                <ul>
+                                    <li>耕作机械<br /><span class="t1">238763</span><i>（台）</i></li>
+                                    <li>种植机械<br /><span class="t2">238763</span><i>（台）</i></li>
+                                    <li>排灌机械<br /><span class="t3">238763</span><i>（台）</i></li>
+                                    <li>植保机械<br /><span class="t4">238763</span><i>（台）</i></li>
+                                    <li>收获机械<br /><span class="t5">238763</span><i>（台）</i></li>
+                                    <li>收获后处理机械<br /><span class="t6">238763</span><i>（台）</i></li>
+                                    <li>设施农业设备<br /><span class="t7">238763</span><i>（台）</i></li>
+                                    <li>农产品初加工机械<br /><span class="t8">238763</span><i>（台）</i></li>
+                                </ul>
+                            </div>
+                            <div class="sp-slide">
+                                <ul>
+                                    <li>耕作机械2<br /><span class="t1">238763</span><i>（台）</i></li>
+                                    <li>种植机械2<br /><span class="t2">238763</span><i>（台）</i></li>
+                                    <li>排灌机械2<br /><span class="t3">238763</span><i>（台）</i></li>
+                                    <li>植保机械2<br /><span class="t4">238763</span><i>（台）</i></li>
+                                    <li>收获机械2<br /><span class="t5">238763</span><i>（台）</i></li>
+                                    <li>收获后处理机械2<br /><span class="t6">238763</span><i>（台）</i></li>
+                                    <li>设施农业设备2<br /><span class="t7">238763</span><i>（台）</i></li>
+                                    <li>农产品初加工机械2<br /><span class="t8">238763</span><i>（台）</i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs22">
+                    <div id="sliderJx2" class="slider-pro">
+                        <div class="sp-slides">
+                            <div class="sp-slide">
+                                <ul>
+                                    <li>耕作机械1<br /><span class="t1">238763</span><i>（台）</i></li>
+                                    <li>种植机械<br /><span class="t2">238763</span><i>（台）</i></li>
+                                    <li>排灌机械<br /><span class="t3">238763</span><i>（台）</i></li>
+                                    <li>植保机械<br /><span class="t4">238763</span><i>（台）</i></li>
+                                    <li>收获机械<br /><span class="t5">238763</span><i>（台）</i></li>
+                                    <li>收获后处理机械<br /><span class="t6">238763</span><i>（台）</i></li>
+                                    <li>设施农业设备<br /><span class="t7">238763</span><i>（台）</i></li>
+                                    <li>农产品初加工机械<br /><span class="t8">238763</span><i>（台）</i></li>
+                                </ul>
+                            </div>
+                            <div class="sp-slide">
+                                <ul>
+                                    <li>耕作机械2<br /><span class="t1">238763</span><i>（台）</i></li>
+                                    <li>种植机械2<br /><span class="t2">238763</span><i>（台）</i></li>
+                                    <li>排灌机械2<br /><span class="t3">238763</span><i>（台）</i></li>
+                                    <li>植保机械2<br /><span class="t4">238763</span><i>（台）</i></li>
+                                    <li>收获机械2<br /><span class="t5">238763</span><i>（台）</i></li>
+                                    <li>收获后处理机械2<br /><span class="t6">238763</span><i>（台）</i></li>
+                                    <li>设施农业设备2<br /><span class="t7">238763</span><i>（台）</i></li>
+                                    <li>农产品初加工机械2<br /><span class="t8">238763</span><i>（台）</i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="left-top"></i>
+                <i class="right-top"></i>
+                <i class="right-bottom"></i>
+                <i class="left-bottom"></i>
+            </div>
+        </div>
+    </div>
+    <div class="wraprow">
+        <div id="tabsTlj" class="box col04">
+            <ul class="titles">
+                <li><a href="#tabs1"><h2>拖拉机办证统计</h2></a></li>
+                <li><a href="#tabs2"><h2>拖拉机办证受理统计</h2></a></li>
+            </ul>
+            <div id="tabs1">
+				<ul class="table-heads">
+					<li>
+						<span style="margin-left:-6px;margin-right: 40px;">地区</span>
+						<span>注册登记</span>
+						<span>转入登记</span>
+						<span>变更登记</span>
+						<span>注销登记</span>
+					</li>
+				</ul>
+				<div id="scrollBox" class="scrollBox">	
+					<ul id="con1" class="con1">				
+						<li>
+							<span>江苏省</span>
+							<span>55</span>
+							<span>5</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>55</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>5</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li>
+					</ul>
+					<ul  id="con2" class="con2"></ul>
+				</div>
+            </div>
+            <div id="tabs2" >
+                <ul class="table-heads">
+					<li>
+						<span style="margin-left:-6px;margin-right: 40px;">地区</span>
+						<span>注册登记</span>
+						<span>转入登记</span>
+						<span>变更登记</span>
+						<span>注销登记</span>
+					</li>
+				</ul>
+				<div id="scrollBox1" class="scrollBox">	
+					<ul id="con11"class="con1">				
+						<li>
+							<span>江苏省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li>
+					</ul>
+					<ul  id="con21" class="con2"></ul>
+				</div>
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+        <div id="tabsJsz" class="box col05">
+            <ul class="titles">
+                <li><a href="#tabs1"><h2>驾驶证办证统计</h2></a></li>
+                <li><a href="#tabs2"><h2>拖拉机办证已审核统计</h2></a></li>
+            </ul>
+            <div id="tabs1">
+                <ul class="table-heads">
+					<li>
+						<span style="margin-left:-6px;margin-right: 40px;">地区</span>
+						<span>注册登记</span>
+						<span>转入登记</span>
+						<span>变更登记</span>
+						<span>注销登记</span>
+					</li>
+				</ul>
+				<div id="scrollBox2" class="scrollBox">	
+					<ul id="con12"class="con1">				
+						<li>
+							<span>江苏省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li>
+					</ul>
+					<ul  id="con22" class="con2"></ul>
+				</div>
+            </div>
+            <div id="tabs2">
+                <ul class="table-heads">
+					<li>
+						<span style="margin-left:-6px;margin-right: 40px;">地区</span>
+						<span>注册登记</span>
+						<span>转入登记</span>
+						<span>变更登记</span>
+						<span>注销登记</span>
+					</li>
+				</ul>
+				<div id="scrollBox3" class="scrollBox">	
+					<ul id="con13"class="con1">				
+						<li>
+							<span>江苏省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li><li>
+							<span>浙江省</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+							<span>2855</span>
+						</li>
+					</ul>
+					<ul  id="con23" class="con2"></ul>
+				</div>
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+        <div class="box col06">
+            <div class="title"><h2>购机补贴情况</h2></div>
+            <div class="chart" style="width:430px;height:130px;margin:0 auto;">
+                <!--放图表-->
+                 <div id="zhnjPie" style="width:500px;height:250px;"></div>
+            	<table class="table-box4">
+					<tr class="table-head">
+					    <td class="com classify">分类</td>
+					    <td class="com value">数量(万元)</td>
+					 </tr>
+					<tr class="table-center">
+						<td style="padding-right:110px;"><i class="icon01 icon-com"></i>中央补贴</td>
+						<td style="padding-right:70px;">5272</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon02 icon-com"></i>省补贴</td>
+						<td>19999</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon03 icon-com"></i>市补贴</td>
+						<td>29200</td>
+					</tr>
+					<tr class="table-center">
+						<td><i class="icon04 icon-com"></i>县补贴</td>
+						<td>15265</td>
+					</tr>
+				</table> 
+            </div>
+            <i class="left-top"></i>
+            <i class="right-top"></i>
+            <i class="right-bottom"></i>
+            <i class="left-bottom"></i>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+    <script src="js/echarts.min.js" ></script>
+     <script src="js/zhnj.js" ></script> 
+    <script src="js/drawMap3.js" ></script>
+    <script src="js/index.js"></script>
+
+    <script>
+    $(function() {
+        //下拉菜单
+        $(".menu").mouseover(function(){
+            $("#menuItems").slideDown();
+        });
+        $("#menuItems").mouseleave(function(){
+            $(this).slideUp();
+        })
+        //初始化幻灯片
+
+        $("#sliderJx1").sliderPro({
+            width: '585',
+            height: '216',
+            autoHeight: false,
+            slideDistance: 0,
+            autoplay: true,
+            autoplayDelay: 3000,
+            orientation: 'vertical'
+        });
+        $("#sliderJx2").sliderPro({
+            width: '585',
+            height: '216',
+            autoHeight: false,
+            slideDistance: 0,
+            autoplay: true,
+            autoplayDelay: 3000,
+            orientation: 'vertical'
+        });
+		//切换
+          $("#tabsJx").tabs();
+          $("#tabsTlj").tabs();
+          $("#tabsJsz").tabs();
+          //$("#tabsMap").tabs();
+          
+          
+		//向上滚动
+		topRun("scrollBox","con1","con2");
+		topRun("scrollBox1","con11","con21");
+		topRun("scrollBox2","con12","con22");
+		topRun("scrollBox3","con13","con23");
+
+		
+        //全屏铺满
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+    });
+    //调整浏览器窗口全屏铺满
+    $(window, document).resize(function() {
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+    });
+</script>
+</body>
+</html>

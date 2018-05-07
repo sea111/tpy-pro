@@ -1,0 +1,323 @@
+/*环形图样式*/
+.pie{
+	width:200px;
+	height:200px;
+}
+.table-box{
+	position:absolute;
+    top: 266px;
+    left: 216px;
+	z-index:9;
+}
+.com{
+	font-size:12px;
+	color:#b9b9bc;	
+	padding-bottom:14px;
+}
+.table-center{
+	text-align:left;
+	color:#fff;
+	font-size:12px;
+	line-height:20px;
+}
+.table-centers{
+	text-align:left;
+	color:#fff;
+	font-size:12px;
+	line-height:18px;
+}
+.classify{
+	text-align: -webkit-left;
+	text-align:left;
+	text-align:-moz-left;
+    padding-left: 24px;
+	box-sizing:border-box;
+}
+.value{
+	padding-right:60px;
+	box-sizing:border-box;
+}
+.icon-com{
+	display:inline-block;
+	width:6px;
+	height:6px;
+	border-radius:50%;
+	margin-right:16px;
+}
+.icon1{
+	background:#975fe4;
+}
+.icon2{
+	background:#2e7cc9;
+}
+.icon3{
+	background:#37cbcb;
+}
+.icon4{
+	background:#4dcb73;
+}
+.icon5{
+	background:#f2637b;
+}
+/*柱状图样式*/
+.pie-left{
+	float: left;
+    width: 150px;
+    height: 150px;
+    top: -28px;
+    left: -54px;
+}
+.pie-right{
+	float: left;
+    position: absolute;
+    /* top: 218px; */
+    top: 205px;
+    text-align: left;
+    line-height: 18px;
+}
+.pie-right1{
+	left: 106px;
+}
+.pie-right2{		
+	left: 231px;
+}
+.pie-right3{		
+	left: 356px;
+}
+.pie-right4{		
+	left: 482px;
+}
+.pie-color{
+	color:#fff;
+}
+.farm{
+	font-size:14px;
+}
+.product{
+	font-size:12px;
+}
+.pie-num{
+	font-size:16px;
+	color:#4dd3e2;
+}
+/*农村居民人均纯收入趋势*/
+.incomeBar{
+	height:250px;
+}
+/*城镇居民收入*/
+.city-width{
+	width:160px;	
+	height:140px;
+	text-align:center;
+}
+.town{
+	font-size:14px;
+	color:#fff;
+	margin-bottom:50px;
+}
+.contain-com{
+	width:100px;  
+   	height:16px; 
+   	margin-left:46px;
+}
+.container1{  
+   background:#303147;
+}
+.container2{   
+   background:#2e2f41;  
+}
+.bar-com{
+   float:left; 
+   height:100%;  
+   text-align:center;  
+   line-height:150%;	
+}
+#bar1{  
+   background:#0d8aa7;  
+ }  
+#bar2{  
+   background:#2d5bb0;  
+ } 
+ .money{
+ 	margin-bottom:20px;
+ 	margin-left:-24px;
+ }
+.city-pie{
+	width:200px;
+	height:200px;
+	top:-70px;
+}
+/*粮食产量种类*/
+.container-com{
+   width:207px;  
+   height:10px; 
+   /*margin-top:10px;*/
+  margin-top:10px;
+}
+.container3{  
+   background:#2e2f41;
+}
+.container4{   
+   background:#2e2f41;
+}
+ .container5{   
+   background:#2e2f41;
+}
+.container6{   
+   background:#2e2f41;
+}
+.container7,.container8,.container9,.container10,
+.container11,.container12,.container13,.container14,
+.container15,.container16,.container17,.container18,
+.container19,.container20,.container21,.container22,
+.container23,.container24,.container25,.container26,
+.container27,.container28,.container29,.container30,
+.container31,.container32{   
+   background:#2e2f41;
+}
+#bar3,#bar4,#bar5,#bar6{  
+   background:#2d5bb0;  
+ } 
+#bar7,#bar8,#bar9,#bar10,#bar11,#bar12,#bar13,#bar14,
+#bar15,#bar16,#bar17,#bar18,#bar19,#bar20,#bar21,#bar22,
+#bar23,#bar24,#bar25,#bar26,#bar27,#bar28,#bar29,#bar30,
+#bar31,#bar32{
+	background:#2d5bb0;
+}
+/*地图样式*/
+ul.maps{
+    overflow: hidden;
+}
+.ect{
+    width: 805px;
+    height: 750px;
+    position: absolute;
+    left: -106px;
+    bottom:  -93px;
+}
+ul.maps li{
+    float: left;
+    width: 650px;
+    height: 650px;
+}
+ul.maps li .wz1{
+    position: absolute;
+    bottom: 74px;
+    right: 334px
+}
+ul.maps li .hz1{
+    position: absolute;
+    bottom: 404px;
+    right: 400px;
+}
+ul.maps li .nb1{
+    position: absolute;
+    bottom: 344px;
+    right: 226px;
+}
+ul.maps li .tz1{
+    position: absolute;
+    bottom: 225px;
+    right: 260px;
+}
+ul.maps li .ls1{
+    position: absolute;
+    bottom: 140px;
+    right: 398px;
+}
+ul.maps li .qz1{
+    position: absolute;
+    bottom: 244px;
+    right: 549px;
+}
+ul.maps li .jh1{
+    position: absolute;
+    bottom: 281px;
+    right: 398px;
+}
+ul.maps li .sx1{
+    position: absolute;
+    bottom: 363px;
+    right: 309px;
+}
+ul.maps li .huz1{
+    position: absolute;
+    bottom: 489px;
+    right: 376px;
+}
+ul.maps li .jx1{
+    position: absolute;
+    bottom: 478px;
+    right: 228px;
+}
+ul.maps li .zs1{
+    position: absolute;
+    bottom: 419px;
+    right: 116px;
+}
+
+/*全省农资企业统计*/  
+.table-box2{
+	position:absolute;
+    top:130px;
+    left:266px;
+	z-index:9;
+}
+
+.table-box3{
+	position:absolute;
+    top:32px;
+    left:188px;
+	z-index:9;
+}
+.classify{
+	text-align:-webkit-left;
+	text-align:left;
+	text-align:-moz-left;
+    padding-left: 24px;
+	box-sizing:border-box;
+}
+.value{
+	padding-right:60px;
+	box-sizing:border-box;
+}
+.icon01{
+	background:#975fe4;
+}
+.icon02{
+	background:#2e7cc9;
+}
+.icon03{
+	background:#37cbcb;
+}
+.icon04{
+	background:#4dcb73;
+}
+.icon05{
+	background:#1890ff;
+}
+.icon06{
+	background:#2fc25b;
+}
+.icon07{
+	background:#facc14;
+}
+.icon08{
+	background:#f04864;
+}
+.icon09{
+	background:#8543e0;
+}
+/*智慧农机样式*/
+/*.table-box3{
+	position:absolute;
+    top: 40px;
+    left: 194px;
+	z-index:9;
+}*/
+.table-box4{
+	position:absolute;
+    top: 60px;
+    left: 290px;
+	z-index:9;
+}

@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>浙江省智慧农业云平台</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/slider-pro.min.css" rel="stylesheet" media="screen"/>
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/xmjg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/echarts.css" />
+    <style>
+	    #tabsFull li {
+	        display: inline-block;
+	    }
+	    
+	    .table-head{
+			overflow: hidden;
+			margin-bottom: 12px;
+    		margin-top: 40px;
+    		color:#888;
+		}
+		.table-head span{
+			margin: 0 24px;
+		}
+		.scrollBox{
+			height: 260px;
+		    width: 522px;
+		    overflow: hidden;
+		    margin: 0px 4px;
+		}
+		.scrollBox .con1,.con2{
+		    width: 529px;
+			float: left;
+		}
+	    .scrollBox li{
+		    height: 24px;
+			/* line-height: 18px; */
+		}
+		.scrollBox li span{
+			display: inline-block;
+			margin: 18px 26px;
+			height: 18px;
+			color:#fff;
+		}
+		.scrollBox li span.blue{
+			color:#13b3d7;
+		}
+		.table-heads{
+			overflow: hidden;
+			margin-bottom: 8px;
+    		margin-top: 28px;
+    		color:#888;
+		}
+		.table-heads span{
+			margin: 0 24px;
+		}
+		.scrollBoxlt{
+			height: 132px;
+			width: 522px;
+		    overflow: hidden;
+		    margin: 0px 4px;
+		}
+		.scrollBoxlt li span{
+			display: inline-block;
+			margin: 17px 26px;
+			height: 18px;
+			color:#fff;
+		}
+		.boxsmark{
+			background:#000;
+			filter:alpha(Opacity=30);
+			-moz-opacity:0.3;
+			opacity: 0.3;
+			width:550px;
+			height:230px;
+			position:absolute;
+			bottom:1px;
+    		z-index:1;
+		}
+    </style>
+</head>
+<body >
+    <div class="header">
+        <h1><img src="images/logo_xmjg.png" width="420" height="43" /></h1>
+    </div>
+    <span class="menu"></span>
+    <ul id="menuItems" class="menu-items" style="display:none">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ncjy.html">农村经营</a></li>
+        <li><a href="nyst.html">农业生态</a></li>
+        <li><a href="zlaq.html">质量安全</a></li>
+        <li><a href="ncpjg.html">农产品价格</a></li>
+        <li class="active">畜牧监管</li>
+        <li><a href="zhnj.html">智慧农机</a></li>
+        <i class="left-top"></i>
+        <i class="right-top"></i>
+        <i class="right-bottom"></i>
+        <i class="left-bottom"></i>
+    </ul>
+    <div id="seleYear">
+    	<select class="yearS">
+    		<option>2017</option>
+    	</select>
+    </div>
+    <div class="wrap">
+        <select class="xm-select">
+            <option value="zhus" class="zhus">猪</option>
+            <option value="yangs" class="yangs">羊</option>
+            <option value="nius" class="nius">牛</option>
+            <option value="jis" class="jis">鸡</option>
+            <option value="yas" class="yas">鸭</option>
+        </select>
+        <ul id="tabsBtn" class="tabs-btns">
+	        <a href="xmjg.html"><li>近7日</li></a>
+	        <a href="javascript:;"><li class="active">按月</li></a>
+	        <a href="xmjgYear.html"><li>按年</li></a>
+	    </ul> 
+    </div>
+     
+    <div id="tabsFull">
+        <ul class="tabLi clearfix">
+            <li class="drl"><a class="active" href="#tab-1">调入量(省外)</a><div class="line" style="display: block;"></div></li>
+    		<li class="ltl"><a href="#tab-2">流通量(浙江)</a><div class="line"></div></li>
+    		<li class="cll"><a href="#tab-3">存栏量</a><div class="line"></div></li>
+    		<li class="chul"><a href="#tab-4">出栏量</a><div class="line"></div></li>
+        </ul>     
+        <ul class="tabs-today">
+            <li class="jrsrl" style="display: block;"><span class="drlNum">314106</span><i>环比增长12%</i></li>
+           
+        </ul>    
+        <div class="wraprow clearfix" id="tab-1">
+            <div class="col01">
+                <div class="chart" style="height:976px;background:transparent">
+                    <div id="xmjgMap1" style="width:1300px;height:976px;"></div>
+                </div>
+                <div class="boxsmark"></div>
+                <div class="box">
+                    <div class="title"><h2>省外调入同比/环比</h2></div>
+                    <div class="chart" style="width:500px;height:155px;margin:10px auto 0;">
+                        <div id="xmjgLine1" style="width:560px;height:200px;left:-16px;top:-18px;"></div>
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>  
+            </div>
+            <div class="col02">
+                <div class="box row01">
+                    <div class="title"><h2>省外调入趋势</h2></div>                 
+                    <div id="sliderDrqs" class="slider-top">
+                        <div id="shengW1">
+                        	<div class="chart" style="width:495px;height:160px;margin:10px auto 0;">
+								<div id="xmjgLine20" style="width:500px;height:200px;"></div>		                        	
+	                    	</div>
+                        </div>             
+                    </div>                  
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row02">
+                    <div class="title"><h2>省外调入目的地分析</h2></div>                                  
+                    <div id="sliderDrmdd" class=" slider-top">                       
+                        <div id="shengWD1">
+                            <div class="chart" style="width:500px;height:155px;margin:10px auto 0;">
+                                <div id="xmjgBar10" style="width:540px;height:160px;"></div>
+                            </div>
+                        </div>        
+                    </div>                   
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row03">
+                    <div class="title"><h2>启用地排行榜</h2></div>
+                    <select class="select" id="select1">
+                        <option value="zhejiang">浙江省</option>
+                        <option value="anhui">安徽省</option>
+                        <option value="jiangxi">江西省</option>
+                    </select>
+                    <div id="sliderQydph">
+                        <div id="qiyd1">
+                            <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollqiyd1" class="scrollBox">	
+								<ul id="conqiyd11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conqiyd12" class="con2"></ul>
+							</div>
+                        </div>
+					</div>
+					<div id="sliderQydph2" style="display:none;">
+					    <div id="shengToday21">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="seleScroll2" class="scrollBox">	
+								<ul id="consele21" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="consele22" class="con2"></ul>
+							</div>
+						</div>
+					</div>
+					<div id="sliderQydph3" style="display:none;">
+						<div id="shengToday31">
+							<ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间3</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="seleScroll3" class="scrollBox">	
+								<ul id="consele31" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="consele32" class="con2"></ul>
+							</div>
+						</div>												
+					</div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+        </div>
+        <div class="wraprow clearfix" id="tab-2">
+            <div class="col01">
+                <div class="chart" style="position:relative;top:50px;height:926px;background:transparent">                    
+                	<div id="map-lt">
+                		<div id="zhu-lt">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456111</span>
+		                            <span class="nb">456111</span>
+		                            <span class="wz">456111</span>
+		                            <span class="tz">456111</span>
+		                            <span class="ls">456111</span>
+		                            <span class="qz">456111</span>
+		                            <span class="zs">456111</span>
+		                            <span class="huz">456111</span>
+		                            <span class="jx">456111</span>
+		                            <span class="sx">456111</span>
+		                            <span class="jh">456111</span>
+		                            <div class="xmjg-ect" id="xmjgmap-lt1"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="yang-lt" style="display:none;">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456222</span>
+		                            <span class="nb">456222</span>
+		                            <span class="wz">456222</span>
+		                            <span class="tz">456222</span>
+		                            <span class="ls">456222</span>
+		                            <span class="qz">456222</span>
+		                            <span class="zs">456222</span>
+		                            <span class="huz">456222</span>
+		                            <span class="jx">456222</span>
+		                            <span class="sx">456222</span>
+		                            <span class="jh">456222</span>
+		                            <div class="xmjg-ect" id="xmjgmap-lt2"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="niu-lt" style="display:none;">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456333</span>
+		                            <span class="nb">456333</span>
+		                            <span class="wz">456333</span>
+		                            <span class="tz">456333</span>
+		                            <span class="ls">456333</span>
+		                            <span class="qz">456333</span>
+		                            <span class="zs">456333</span>
+		                            <span class="huz">456333</span>
+		                            <span class="jx">456333</span>
+		                            <span class="sx">456333</span>
+		                            <span class="jh">456333</span>
+		                            <div class="xmjg-ect" id="xmjgmap-lt3"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="ji-lt" style="display:none;">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456444</span>
+		                            <span class="nb">456444</span>
+		                            <span class="wz">456444</span>
+		                            <span class="tz">456444</span>
+		                            <span class="ls">456444</span>
+		                            <span class="qz">456444</span>
+		                            <span class="zs">456444</span>
+		                            <span class="huz">456444</span>
+		                            <span class="jx">456444</span>
+		                            <span class="sx">456444</span>
+		                            <span class="jh">456444</span>
+		                            <div class="xmjg-ect" id="xmjgmap-lt4"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="ya-lt" style="display:none;">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456555</span>
+		                            <span class="nb">456555</span>
+		                            <span class="wz">456555</span>
+		                            <span class="tz">456555</span>
+		                            <span class="ls">456555</span>
+		                            <span class="qz">456555</span>
+		                            <span class="zs">456555</span>
+		                            <span class="huz">456555</span>
+		                            <span class="jx">456555</span>
+		                            <span class="sx">456555</span>
+		                            <span class="jh">456555</span>
+		                            <div class="xmjg-ect" id="xmjgmap-lt5"></div>
+		                        </li>
+		                    </ul>
+                		</div>                		                		               		
+                	</div>            
+                </div>
+                <div class="boxsmark"></div>
+                <div class="box">
+                    <div class="title"><h2>流通量排行榜</h2></div>
+                    <select class="select" id="select2">
+                        <option value="zhejiang">浙江省</option>
+                        <option value="anhui">安徽省</option>
+                        <option value="jiangxi">江西省</option>
+                    </select>
+                    <div id="sliderLtlph">
+                        <div id="liuT1">
+                            <ul class="table-heads">
+								<li>
+									<span style="margin-left:40px;margin-right:46px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollliuT1" class="scrollBox scrollBoxlt">	
+								<ul id="conliuT11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>									
+								</ul>
+								<ul  id="conliuT12" class="con2"></ul>
+							</div>
+                      	</div>                                               
+                    </div>
+                    <div id="sliderLtlph2" style="display:none;">
+					    <div id="ltlToday21">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollLtl1" class="scrollBox">	
+								<ul id="conLtl11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conLtl12" class="con2"></ul>
+							</div>
+						</div>																		
+					</div>
+                    <div id="sliderLtlph3" style="display:none;">
+					    <div id="ltlToday31">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="ltlTodayScroll2" class="scrollBox">	
+								<ul id="conltlToday21" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conltlToday22" class="con2"></ul>
+							</div>
+						</div>
+					</div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+            <div class="col02">
+                <div class="box full lizt">
+                    <div id="ltqs" class="title titles cursor"><h2>流通趋势</h2></div>
+                    <div id="ztfx" class="title cursor"><h2>主体分析</h2></div>
+                    <div id="tab1">
+	                    <ul id="tabsDw" class="tabs-dw">
+	                        <li class="active">动物总量<br /><span>124,54</span><i>头</i></li>
+	                        <li>动物省外<br /><span>124,54</span><i>头</i></li>
+	                        <li>动物省内<br /><span>124,54</span><i>头</i></li>
+	                    </ul>
+	                    <div id="tab1-1">
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine3" style="width:494px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通量同比/环比</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine4" style="width:560px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通启运地分析</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgBar2" style="width:494px;height:210px;"></div>
+		                    </div>
+	                    </div>
+	                    <div id="tab1-2" style="display:none;">
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine31" style="width:494px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通量同比/环比1</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine41" style="width:560px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通启运地分析1</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgBar21" style="width:494px;height:210px;"></div>
+		                    </div>
+	                    </div>
+	                    <div id="tab1-3" style="display:none;">
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine32" style="width:494px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通量同比/环比2</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgLine42" style="width:560px;height:210px;"></div>
+		                    </div>
+		                    <span class="chart-tit">流通启运地分析2</span>
+		                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+		                        <div id="xmjgBar22" style="width:494px;height:210px;"></div>
+		                    </div>
+	                    </div>
+                    </div>
+                    <div id="tab2" style="display:none">
+                    	<div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+	                        <div id="xmjgLinetab1" style="width:520px;height:210px;"></div>
+	                    </div>
+	                    <div class="zt-center" id="zt-center">
+	                    	<ul class="tabs-dw">
+	                    		<li class="tab-li actives">规模养殖<br/><span>124,54</span></li>
+	                    		<li class="tab-li">屠宰企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li">无害化企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li">公路检查站<br/><span>124,54</span></li>
+	                    		<li class="tab-li">饲料生产企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li">兽药生产企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li">兽药经营企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li">保险公司<br/><span>124,54</span></li>
+	                    		<li class="tab-li">疫苗企业<br/><span>124,54</span></li>
+	                    		<li class="tab-li tab-last">跨县分销企业<br/><span>124,54</span></li>
+	                    	</ul>
+	                    </div>
+	                    <div class="chart" style="width:494px;height:210px;margin:10px auto 0;">
+	                        <div id="xmjgLinetab2" class="zt-list1" style="width:520px;height:210px;"></div>
+	                    	<div id="xmjgLinetab3" class="zt-list2" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab4" class="zt-list3" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab5" class="zt-list4" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab6" class="zt-list5" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab7" class="zt-list6" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab8" class="zt-list7" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab9" class="zt-list8" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab10" class="zt-list9" style="width:520px;height:210px;display:none;"></div>
+	                    	<div id="xmjgLinetab11" class="zt-list10" style="width:520px;height:210px;display:none;"></div>
+	                    </div>
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+        </div>
+        <div class="wraprow clearfix" id="tab-3">
+            <div class="col01">
+                <div class="chart" style="position:relative;top:50px;height:926px;background:transparent">
+                    <div id="map">
+                		<div id="zhu">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456210</span>
+		                            <span class="nb">456210</span>
+		                            <span class="wz">456210</span>
+		                            <span class="tz">456210</span>
+		                            <span class="ls">456210</span>
+		                            <span class="qz">456210</span>
+		                            <span class="zs">456210</span>
+		                            <span class="huz">456210</span>
+		                            <span class="jx">456210</span>
+		                            <span class="sx">456210</span>
+		                            <span class="jh">456210</span>
+		                            <div class="xmjg-ect" id="xmjgmap3"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="yang" style="display:none">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">434333</span>
+		                            <span class="nb">434333</span>
+		                            <span class="wz">434333</span>
+		                            <span class="tz">434333</span>
+		                            <span class="ls">434333</span>
+		                            <span class="qz">434333</span>
+		                            <span class="zs">434333</span>
+		                            <span class="huz">434333</span>
+		                            <span class="jx">434333</span>
+		                            <span class="sx">434333</span>
+		                            <span class="jh">434333</span>
+		                            <div class="xmjg-ect" id="xmjgmap32"></div>
+		                        </li>
+		                    </ul>
+                		</div>	
+                		<div id="niu" style="display:none">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">234210</span>
+		                            <span class="nb">234210</span>
+		                            <span class="wz">234210</span>
+		                            <span class="tz">234210</span>
+		                            <span class="ls">234210</span>
+		                            <span class="qz">234210</span>
+		                            <span class="zs">234210</span>
+		                            <span class="huz">234210</span>
+		                            <span class="jx">234210</span>
+		                            <span class="sx">234210</span>
+		                            <span class="jh">234210</span>
+		                            <div class="xmjg-ect" id="xmjgmap33"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="ji" style="display:none">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">122333</span>
+		                            <span class="nb">122333</span>
+		                            <span class="wz">122333</span>
+		                            <span class="tz">122333</span>
+		                            <span class="ls">122333</span>
+		                            <span class="qz">122333</span>
+		                            <span class="zs">122333</span>
+		                            <span class="huz">122333</span>
+		                            <span class="jx">122333</span>
+		                            <span class="sx">122333</span>
+		                            <span class="jh">122333</span>
+		                            <div class="xmjg-ect" id="xmjgmap34"></div>
+		                        </li>
+		                    </ul>
+                		</div>
+                		<div id="ya" style="display:none">
+                			<ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">245632</span>
+		                            <span class="nb">245632</span>
+		                            <span class="wz">245632</span>
+		                            <span class="tz">245632</span>
+		                            <span class="ls">245632</span>
+		                            <span class="qz">245632</span>
+		                            <span class="zs">245632</span>
+		                            <span class="huz">245632</span>
+		                            <span class="jx">245632</span>
+		                            <span class="sx">245632</span>
+		                            <span class="jh">245632</span>
+		                            <div class="xmjg-ect" id="xmjgmap35"></div>
+		                        </li>
+		                    </ul>
+	                	</div>                   	
+                    </div>                    
+                </div>
+                <div class="box">
+                    <div class="title"><h2>存栏量同比/环比</h2></div>
+                    <div class="chart" style="width:500px;height:155px;">
+                        <div id="xmjgLine5" style="width:560px;height:200px;"></div>
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+            <div class="col02">
+                <div class="box row01">
+                    <div class="title"><h2>存栏趋势</h2></div>
+                    <div id="sliderClqs" class="slider-top">
+                        <div id="cunlqs1">                                
+                            <div id="xmjgLine61" style="width:550px;height:200px;"></div>                               
+                        </div>
+                        
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row02">
+                    <div class="title"><h2>存栏辖区</h2></div>
+                    <div id="sliderClxq" class="slider-top">            
+                        <div id="cunlxq1">                                
+                            <div class="chart" style="width:500px;height:155px;margin:10px auto 0;">
+                                <div id="xmjgBar31" style="width:500px;height:155px;"></div>                                    
+                            </div>                                
+                        </div>
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row03">
+                    <div class="title"><h2>存栏动态排行榜</h2></div>
+                    <select class="select" id="select3">
+                        <option value="zhejiang">浙江省</option>
+                        <option value="anhui">安徽省</option>
+                        <option value="jiangxi">江西省</option>
+                    </select>
+                    <div id="sliderCldt" class="slider-top">
+                        <div id="cunldt1">
+                        	<ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollBox1" class="scrollBox">	
+								<ul id="con1" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="con2" class="con2"></ul>
+							</div>
+                        </div>
+                    </div>
+                    <div id="sliderCldt2" style="display:none;">
+					    <div id="cunldtToday21">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollcunldt1" class="scrollBox">	
+								<ul id="concunldt11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="concunldt12" class="con2"></ul>
+							</div>
+						</div>
+					</div>
+                    <div id="sliderCldt3" style="display:none;">
+                    	<div id="cunldtToday31">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollcunldtT1" class="scrollBox">	
+								<ul id="concunldtT11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="concunldtT12" class="con2"></ul>
+							</div>
+						</div>
+                    </div>    
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+        </div>
+        <div class="wraprow clearfix" id="tab-4">
+            <div class="col01">
+                <div class="chart" style="position:relative;top:50px;height:926px;background:transparent">
+                    <div id="maps">
+                		<div id="zhu2">
+		                    <ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">456210</span>
+		                            <span class="nb">456210</span>
+		                            <span class="wz">456210</span>
+		                            <span class="tz">456210</span>
+		                            <span class="ls">456210</span>
+		                            <span class="qz">456210</span>
+		                            <span class="zs">456210</span>
+		                            <span class="huz">456210</span>
+		                            <span class="jx">456210</span>
+		                            <span class="sx">456210</span>
+		                            <span class="jh">456210</span>
+		                            <div class="xmjg-ect" id="xmjgmap4"></div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div id="yang2" style="display:none;">
+		                    <ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">222456</span>
+		                            <span class="nb">222456</span>
+		                            <span class="wz">222456</span>
+		                            <span class="tz">222456</span>
+		                            <span class="ls">222456</span>
+		                            <span class="qz">222456</span>
+		                            <span class="zs">456210</span>
+		                            <span class="huz">222456</span>
+		                            <span class="jx">222456</span>
+		                            <span class="sx">456210</span>
+		                            <span class="jh">222456</span>
+		                            <div class="xmjg-ect" id="xmjgmap42"></div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div id="niu2" style="display:none;">
+		                    <ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">333456</span>
+		                            <span class="nb">333456</span>
+		                            <span class="wz">333456</span>
+		                            <span class="tz">333456</span>
+		                            <span class="ls">333456</span>
+		                            <span class="qz">333456</span>
+		                            <span class="zs">333456</span>
+		                            <span class="huz">333456</span>
+		                            <span class="jx">456210</span>
+		                            <span class="sx">456210</span>
+		                            <span class="jh">333456</span>
+		                            <div class="xmjg-ect" id="xmjgmap43"></div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div id="ji2" style="display:none;">
+		                    <ul class="xmjg-maps">
+		                        <li>
+		                            <span class="hz">444456</span>
+		                            <span class="nb">444456</span>
+		                            <span class="wz">444456</span>
+		                            <span class="tz">444456</span>
+		                            <span class="ls">444456</span>
+		                            <span class="qz">444456</span>
+		                            <span class="zs">456210</span>
+		                            <span class="huz">456210</span>
+		                            <span class="jx">444456</span>
+		                            <span class="sx">456210</span>
+		                            <span class="jh">444456</span>
+		                            <div class="xmjg-ect" id="xmjgmap44"></div>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div id="ya2" style="display:none;">
+			                    <ul class="xmjg-maps">
+			                        <li>
+			                            <span class="hz">555456</span>
+			                            <span class="nb">555456</span>
+			                            <span class="wz">555456</span>
+			                            <span class="tz">555456</span>
+			                            <span class="ls">555456</span>
+			                            <span class="qz">555456</span>
+			                            <span class="zs">555456</span>
+			                            <span class="huz">555456</span>
+			                            <span class="jx">555456</span>
+			                            <span class="sx">456210</span>
+			                            <span class="jh">456210</span>
+			                            <div class="xmjg-ect" id="xmjgmap45"></div>
+			                        </li>
+			                    </ul>
+			               </div>
+			        </div>
+                </div>
+                <div class="box">
+                    <div class="title"><h2>出栏量同比/环比</h2></div>
+                    <div class="chart" style="position:relative;height:926px;background:transparent">
+                        <div id="xmjgLine7" style="width:560px;height:200px;"></div>
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+            <div class="col02">
+                <div class="box row01">
+                    <div class="title"><h2>出栏趋势</h2></div>                   
+                    <div id="sliderChlqs" class="slider-top">
+                        <div id="chulqs1">
+                            <div class="chart" style="width:500px;height:155px;">
+                                <div id="xmjgLine81" style="width:550px;height:200px;"></div>
+                            </div>
+                        </div>              
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row02">
+                    <div class="title"><h2>出栏辖区</h2></div>                   
+                    <div id="sliderChlxq" class="slider-top">
+                        <div id="chuxq1">
+                            <div class="chart" style="width:500px;height:155px;margin:10px auto 0;">
+                                <div id="xmjgBar41" style="width:500px;height:155px;"></div>
+                            </div>
+                        </div>          
+                    </div>
+                    <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+                <div class="box row03">
+                    <div class="title"><h2>出栏动态排行榜</h2></div>
+                    <select class="select" id="select4">
+                        <option value="zhejiang">浙江省</option>
+                        <option value="anhui">安徽省</option>
+                        <option value="jiangxi">江西省</option>
+                    </select>
+                    <div id="sliderChldt" class="slider-top">
+                        <div id="chudt1">
+                            <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollchudt1" class="scrollBox">	
+								<ul id="conchudt11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conchudt12" class="con2"></ul>
+							</div>
+                        </div>
+                    </div>
+                   	<div id="sliderChldt2" style="display:none;">
+                   		<div id="ChldtToday21">
+						    <ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollchldt1" class="scrollBox">	
+								<ul id="conchldt11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conchldt12" class="con2"></ul>
+							</div>
+						</div>
+                   		
+                   		
+                  	
+                   	</div>
+                   	<div id="sliderChldt3" style="display:none;">
+                   		<div id="ChldtToday31">
+                   			<ul class="table-head">
+								<li>
+									<span style="margin-left:28px;margin-right:48px;">时间1</span>
+									<span>种类</span>
+									<span>启用地</span>
+									<span>调用数量</span>
+									<span>目的地</span>
+								</li>
+							</ul>
+							<div id="scrollchldtT1" class="scrollBox">	
+								<ul id="conchldtT11" class="con1">				
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+									<li>
+										<span>2017.12.15</span>
+										<span class="blue">活猪</span>
+										<span>石家庄</span>
+										<span>46576</span>
+										<span>杭州市</span>
+									</li>
+								</ul>
+								<ul  id="conchldtT12" class="con2"></ul>
+							</div>
+                   		</div>                                    		
+                   	</div>                   
+                   <i class="left-top"></i>
+                    <i class="right-top"></i>
+                    <i class="right-bottom"></i>
+                    <i class="left-bottom"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sliderPro1.js" ></script>
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+    <script type="text/javascript" src="js/echarts.js" ></script>
+     <script type="text/javascript" src="js/xmjgMonth.js" ></script> 
+    <script type="text/javascript" src="js/drawMap4.js" ></script>
+    <script src="js/index.js"></script>
+
+    <script>
+    $(function() {
+    	// tab切换
+		$('.tabLi li ').on('click',function(){
+			$('.tabLi li a').removeClass('active');
+			$(this).find('a').addClass('active');
+			$('.tabLi li .line').hide();
+			$(this).find('.line').show();
+		})
+        //下拉菜单
+        $(".menu").mouseover(function(){
+            $("#menuItems").slideDown();
+        });
+        $("#menuItems").mouseleave(function(){
+            $(this).slideUp();
+        })
+        //初始化幻灯片 选项卡切换
+        $("#tabsFull").tabs();
+       
+       //向上滚动
+       	topRun("scrollqiyd1","conqiyd11","conqiyd12");
+       	
+       	topRun("scrollBox1","con1","con2");	
+		
+		topRun("scrollliuT1","conliuT11","conliuT12");
+		
+		
+		topRun("scrollchudt1","conchudt11","conchudt12");
+		//启用地省		
+		topRun("seleScroll2","consele21","consele22");
+		topRun("seleScroll3","consele31","consele32");		
+		
+		
+		topRun("scrollLtl1","conLtl11","conLtl12");
+		
+		
+		topRun("ltlTodayScroll2","conltlToday21","conltlToday22")
+		
+		
+		topRun("scrollcunldt1","concunldt11","concunldt12")
+		
+		topRun("scrollcunldtT1","concunldtT11","concunldtT12")
+		
+		topRun("scrollchldt1","conchldt11","conchldt12");
+		
+		topRun("scrollchldtT1","conchldtT11","conchldtT12");
+		
+		//日期
+        var initializationTime=(new Date()).getTime();
+        var time1 = new Date().Format("yyyy-MM-dd HH:mm:ss");
+        
+        //全屏铺满
+        var ratioX = $(window).width()/1920;
+        var ratioY = $(window).height()/1080;
+        $("body").css({
+            transform: "scale("+ratioX+","+ratioY+")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%",
+        });
+     
+        //调整浏览器窗口全屏铺满
+	    $(window, document).resize(function() {
+	        var ratioX = $(window).width()/1920;
+	        var ratioY = $(window).height()/1080;
+	        $("body").css({
+	            transform: "scale("+ratioX+","+ratioY+")",
+	            transformOrigin: "left top",
+	            backgroundSize: "100% 100%",
+	        });
+	    });
+	    
+    });
+    
+</script>
+</body>
+</html>
